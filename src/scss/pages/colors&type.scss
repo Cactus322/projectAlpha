@@ -1,57 +1,44 @@
 @import "../colors/colors";
-
-.block {
-  width: 70px;
-  height: 70px;
-  border-radius: 6px;
-}
+@import "../block/block";
+@import "../block/margin/block_margin_first";
+@import "../block/margin/block_margin_second";
 
 .darkShade100 {
   background: $darkShade100;
-  margin-left: 150px;
-  margin-top: 145px;
 }
 
 .darkShade75 {
   background: $darkShade75;
-  margin-left: 150px;
-  margin-top: 20px;
 }
 
 .darkShade50 {
   background: $darkShade50;
-  margin-left: 150px;
-  margin-top: 20px;
 }
 
 .darkShade25 {
   background: $darkShade25;
-  margin-left: 150px;
-  margin-top: 20px;
 }
 
 .darkShade05 {
   background: $darkShade5;
-  margin-left: 150px;
-  margin-top: 20px;
 }
 
 .purple {
   background: $purple;
-  margin-left: 150px;
-  margin-top: 20px;
 }
 
 .green {
   background: $green;
-  margin-left: 150px;
-  margin-top: 20px;
 }
 
-.block-text {
-  position: absolute;
-  margin-left: 260px;
-  margin-top: -60px;
+.block-text-main-first {
+  margin-top: 154px;
+  margin-left: 88px;
+}
+
+.block-text-main-second {
+  margin-top: 34px;
+  margin-left: 88px;
 }
 
 .block-text-second {
@@ -62,7 +49,6 @@
 
 .text-example-gray {
   text-align: right;
-  position: relative;
   color: $darkShade25;
 }
 
@@ -70,49 +56,78 @@
   margin-top: 145px;
   font-size: 24px;
   line-height: 29px;
+  margin-left: 79px;
 }
 
 .example-h2 {
-  margin-top: 80px;
+  margin-top: 82px;
   font-size: 19px;
   line-height: 23px;
+  margin-left: 82px;
 }
 
 .example-h3 {
-  margin-top: 74px;
+  margin-top: 76px;
   font-size: 12px;
   line-height: 15px;
+  margin-left: 92px;
 }
 
 .example-body {
-  margin-top: 50px;
+  margin-top: 47px;
   font-size: 14px;
   line-height: 24px;
+  margin-left: 72px;
 }
 
 .text-example-main-h1 {
-  margin-top: 145px;
+  margin-top: 146px;
+  margin-left: 45px;
 }
 
 .text-example-main-h2 {
   margin-top: 50px;
+  margin-left: 45px;
 }
 
 .text-example-main-h3 {
   margin-top: 50px;
+  margin-left: 45px;
 }
 
 .text-example-main-body {
   margin-top: 50px;
+  margin-left: 45px;
 }
 
 .wrapper {
   display: grid;
-  grid-template-columns: 5% 50% 35%;
+  grid-template-columns: 5% 50% 45%;
 }
 
-.wrapper-second {
+.wrapper-text-first {
   display: grid;
   grid-template-columns: 10% 90%;
   grid-gap: 30px;
+}
+
+.wrapper-text-second {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-gap: 30px;
+}
+
+.logo-margin {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .mobile-sections {
+    align-items: center;
+  }
 }
