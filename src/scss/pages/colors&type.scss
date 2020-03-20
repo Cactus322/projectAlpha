@@ -1,4 +1,4 @@
-@import "colors";
+@import "../colors/colors";
 
 .block {
   width: 70px;
@@ -95,11 +95,11 @@
 }
 
 .text-example-main-h2 {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .text-example-main-h3 {
-  margin-top: 74px;
+  margin-top: 50px;
 }
 
 .text-example-main-body {
@@ -108,7 +108,7 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 5% 50% 35%;
 }
 
 .wrapper-second {

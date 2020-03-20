@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -37,25 +38,38 @@ module.exports = {
                 ],
             },
             {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
+            {
                 test: /\.pug$/,
-                use: [
-                    'html-loader',
-                    'pug-html-loader'
-                ]
+                loader: 'pug-loader',
+                options: {
+                    pretty: true
+                }
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
-                use: [
-                    'file-loader',
-                ],
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    publicPath: './images/logo',
+                    outputPath: '/images/'
+                },
             },
             {
                 test: /\.(woff|woff2|svg|ttf|otf)$/,
                 loader: 'file-loader',
                 options: {
                     name: '[name]/[name].[ext]',
-                    publicPath: './fonts.scss/',
-                    outputPath: 'style/fonts.scss/'
+                    publicPath: './fonts/',
+                    outputPath: 'style/fonts/'
                 },
             },
         ],
@@ -63,13 +77,21 @@ module.exports = {
 
     plugins: [
         new MiniCssExtractPlugin({
-            template: './src/scss/all.scss',
-            filename: './style/all.css'
+            template: './src/scss/pages/colors&type.scss',
+            filename: './style/colors&type.css'
         }),
+
         new HtmlWebpackPlugin({
-            template: './src/pug/pages/ui-kit.pug',
+            template: './src/pug/pages/colors&type.pug',
             filename: 'index.html'
         }),
+
+        new CopyWebpackPlugin([
+            {
+                from: './src/images',
+                to: 'images'
+            }
+        ]),
     ],
 
     output: {

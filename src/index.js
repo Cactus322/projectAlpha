@@ -1,3 +1,4 @@
-import './scss/all.scss';
-import './scss/colors.scss';
-import './scss/fonts.scss';
+
+import './scss/pages/colors&type.scss';
+import './scss/colors/colors.scss';
+import './scss/fonts/fonts.scss';
