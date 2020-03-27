@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     mode: 'development',
@@ -13,6 +14,7 @@ module.exports = {
     devServer: {
         contentBase: './dist',
     },
+
 
     module: {
         rules: [
@@ -59,7 +61,7 @@ module.exports = {
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]',
-                    publicPath: './images/logo',
+                    publicPath: './images/all',
                     outputPath: '/images/'
                 },
             },
@@ -76,13 +78,23 @@ module.exports = {
     },
 
     plugins: [
-        new MiniCssExtractPlugin({
-            template: './src/scss/pages/colors&type.scss',
+        /*new MiniCssExtractPlugin({
+            template: './src/scss/Ui kit/colors&type.scss',
             filename: './style/colors&type.css'
+        }), */
+
+        new MiniCssExtractPlugin({
+            template: './src/scss/Ui kit/headers&footers.scss',
+            filename: './style/headers&footers.css'
         }),
 
+        /*new HtmlWebpackPlugin({
+            template: './src/pug/Ui kit/colors&type.pug',
+            filename: 'index.html'
+        }),*/
+
         new HtmlWebpackPlugin({
-            template: './src/pug/pages/colors&type.pug',
+            template: './src/pug/Ui kit/headers&footers.pug',
             filename: 'index.html'
         }),
 
@@ -92,6 +104,11 @@ module.exports = {
                 to: 'images'
             }
         ]),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+        }),
     ],
 
     output: {
