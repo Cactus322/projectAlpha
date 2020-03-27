@@ -1,0 +1,34 @@
+ul,
+li {
+  list-style: none;
+  -webkit-padding-start: 0;
+}
+
+.nav {
+  height: 70px;
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+}
+.nav-logo {
+  flex: 7;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li, a {
+  text-decoration: none;
+  font-family: "Montserrat";
+  color: $darkShade50;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.nav-links li {
+  float: left;
+}

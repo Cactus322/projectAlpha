@@ -1,0 +1,140 @@
+doctype html
+html(lang=ru)
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title="Headers&Footers"
+    body
+        div
+            img.logo-gray(src=require('../../images/all/LogoGray.svg').default width="44px" alt="Логотип")
+        div
+        section
+            nav.nav
+                div.nav-logo
+                    a
+                        img.logo-header(src=require("../../images/all/LogoColor.svg").default width="97px" alt="Логотип")
+                div.dropdown
+                    ul.nav-links
+                        li.home
+                            a(href="#") Home
+                        li.about
+                            a(href="#") About Us
+                        li.services.topmenu
+                            a Services
+                                i.material-icons.services_icon keyboard_arrow_down
+                                ul.submenu
+                                    li
+                                        a(href="#") Service 1
+                                    li.divider
+                                    li
+                                        a(href="#") Service 2
+                                    li.divider
+                                    li
+                                        a(href="#") Service 3
+                        li.careers
+                            a(href="#") Careers
+                        li.news
+                            a(href="#") News
+                        li.documentation
+                            a(href="#") Documentation
+                        li
+                            button.nav_button.nav__button_border-gradient.button-size-login
+                                span LOGIN
+                        li
+                            button.nav_button.nav__button_full-gradient.button-size-register
+                                span REGISTER
+
+        section.margin-section
+            nav.nav
+                div.nav-logo
+                    a
+                        img.logo-header(src=require("../../images/all/LogoColor.svg").default width="97px" alt="Логотип")
+                div.dropdown
+                    ul.nav-links
+                        li.home
+                            a(href="#") Home
+                        li.about
+                            a(href="#") About Us
+                        li.services.topmenu
+                            a Services
+                                i.material-icons.services_icon keyboard_arrow_down
+                                ul.submenu
+                                    li
+                                        a(href="#") Service 1
+                                    li.divider
+                                    li
+                                        a(href="#") Service 2
+                                    li.divider
+                                    li
+                                        a(href="#") Service 3
+                        li.careers
+                            a(href="#") Careers
+                        li.news
+                            a(href="#") News
+                        li.documentation
+                            a(href="#") Documentation
+                        li.border-separation
+                        li.user Cosmin Negoita
+
+        section.margin-section
+            div.footer-widgets
+                div.grid
+                    div
+                        img.logo-footer(src=require("../../images/all/LogoColor.svg").default alt="Логотип")
+                        p.footer-info Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+                    div.footer-navigation
+                        h3 NAVIGATION
+                        p
+                            a(href="#") About us
+                        p
+                            a(href="#") News
+                        p
+                            a(href="#") Support
+                        p
+                            a(href="#") Products
+                    div.footer-about
+                        h3 ABOUT US
+                        p
+                            a(href="#") Who we are
+                        p
+                            a(href="#") Our team
+                        p
+                            a(href="#") Careers
+                        p
+                            a(href="#") Investors
+                    div.footer-support
+                        h3 SUPPORT
+                        p
+                            a(href="#") Documentation
+                        p
+                            a(href="#") Community
+                        p
+                            a(href="#") Get in Touch
+                    div.footer-subscribe
+                        h3 SUBSCRIBE TO OUR NEWSLETTER
+                        p Receive our latest news and promotion in your inbox!
+                        //div.footer-input
+                        //    form
+                        //        input(type="email" placeholder="Your email address")
+                        //        button(type="submit")
+                        form
+                            input(name="q" placeholder="Your email address")
+                            input(type="image" src=require("../../images/all/inputArrow.svg").default)
+            div.copyright
+                div
+                    p Copyright © 2018 Toxin UI Kit. All rights reserved.
+                div
+                    img(src=require("../../images/all/twitter.svg").default alt="Twitter")
+                    img.social-image(src=require("../../images/all/facebook.svg").default alt="Facebook")
+                    img.social-image(src=require("../../images/all/instagram.svg").default alt="Instagram")
+
+        section.margin-section
+            div
+                img.footer-creative-logo(src=require("../../images/all/LogoColor.svg").default width="97px" alt="Logo")
+            div
+                p.footer-creative-text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+            div.footer-creative-social-images
+                img(src=require("../../images/all/twitter.svg").default alt="Twitter")
+                img.social-image(src=require("../../images/all/facebook.svg").default alt="Facebook")
+                img.social-image(src=require("../../images/all/instagram.svg").default alt="Instagram")
+
