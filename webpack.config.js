@@ -107,6 +107,15 @@ module.exports = {
             template: './src/pug/Ui kit/formElements.pug',
             filename: 'index.html'
         }),
+        /*new HtmlWebpackPlugin({
+            template: './src/test/test.pug',
+            filename: 'index.html'
+        }),
+
+        new MiniCssExtractPlugin({
+            template: './src/test/test.scss',
+            filename: './style/test.css'
+        }),*/
 
         new CopyWebpackPlugin([
             {

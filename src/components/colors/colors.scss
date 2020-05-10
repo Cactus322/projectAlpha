@@ -6,6 +6,9 @@ $darkShade5: rgba(31, 32, 65, 0.05);
 $purple: #bc9cff;
 $green: #6fcf97;
 $blue: #8ba4f9;
+$turquoise: #66d2ea;
 
+
+$green_gradient_full: linear-gradient(180deg, $green 0%, $turquoise 100%);
 $purple_gradient_full: linear-gradient(180deg, $purple 0%, $blue 100%);
 $purple_gradient_border: linear-gradient($purple, $blue), linear-gradient(180deg, $purple, $blue);

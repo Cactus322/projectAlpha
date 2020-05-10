@@ -3,5 +3,45 @@ html(lang=ru)
     head
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1")
-        title="Colors&type"
-    body
+        title="Form Elements"
+    body.form-elements
+        div
+            img.form_logo-gray(src=require('../../images/all/LogoGray.svg').default width="44px" alt="Логотип")
+        div
+
+        div.form_grid
+            //text fields
+            section.margin_text-field
+                div
+                    div.comment-grid
+                        p TEXT FIELD
+                        p.style_text-field DEFAULT
+                    input.text-field__default(type="Email" placeholder="Email")
+                div.row-2
+                    div.comment-grid
+                        p TEXT FIELD
+                        p.row-2_style_text-field HOVER/FOCUS
+                    input.text-field__hover(type="Email" placeholder="This is pretty awesome")
+                div.row-3
+                    div.comment-grid
+                        p DROPDOWN
+                        p.row-3_style_dropdown DEFAULT
+                    div.dropdown.absolute(wordforms="Гость Гостя Гостей" default="Сколько гостей?")
+                        div.dropdown__name Сколько гостей?
+                        div.dropdown-list
+                            div.dropdown-list__item(name="adult") Взрослые
+                            div.dropdown-list__item(name="child") Дети
+                            div.dropdown-list__item(name="babes") Младенцы
+                div.row-4
+                    div
+                        div.comment-grid
+                            p MASKED TEXT FIELD
+                            p.style_text-field DEFAULT
+                        input.text-field__default(type="" placeholder="ДД.ММ.ГГГГ")
+                div.row-5.datepicker-grid
+                    div
+                        p DATE DROPDOWN
+                        input#start_datepicker.datepicker-here.date-picker(type="text" placeholder="ДД.ММ.ГГГГ" data-range="true" data-multiple-dates-separator=" - ")
+                    div
+                        p DATE DROPDOWN
+                        input#end_datepicker.date-picker(type="text" placeholder="ДД.ММ.ГГГГ")

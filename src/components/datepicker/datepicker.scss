@@ -1,0 +1,43 @@
+@import "src/components/datepicker/air-datepicker-custom/datepicker-config";
+@import "src/components/datepicker/air-datepicker-custom/cell";
+@import "src/components/datepicker/air-datepicker-custom/datepicker";
+@import "src/components/datepicker/air-datepicker-custom/navigation";
+@import "src/components/datepicker/air-datepicker-custom/timepicker";
+
+.date-picker {
+  width: 150px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid $darkShade25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-indent: 15px;
+}
+
+.date-picker ::-webkit-input-placeholder {
+  color:$darkShade75;
+  font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+}
+
+.date-picker ::-moz-placeholder {
+  color:$darkShade75;
+  font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+}
+
+.date-picker :-moz-placeholder {
+  color:$darkShade75;
+  font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+}
+
+.date-picker :-ms-input-placeholder {
+  color:$darkShade75;
+  font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+}
