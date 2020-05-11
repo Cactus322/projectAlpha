@@ -1,8 +1,8 @@
-@import "src/components/datepicker/air-datepicker-custom/datepicker-config";
-@import "src/components/datepicker/air-datepicker-custom/cell";
-@import "src/components/datepicker/air-datepicker-custom/datepicker";
-@import "src/components/datepicker/air-datepicker-custom/navigation";
-@import "src/components/datepicker/air-datepicker-custom/timepicker";
+@import "../air-datepicker-custom/datepicker-config";
+@import "../air-datepicker-custom/cell";
+@import "../air-datepicker-custom/datepicker";
+@import "../air-datepicker-custom/navigation";
+@import "../air-datepicker-custom/timepicker";
 
 .date-picker {
   width: 150px;
