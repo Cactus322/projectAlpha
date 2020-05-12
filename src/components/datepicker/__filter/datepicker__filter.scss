@@ -3,8 +3,9 @@
 @import "../air-datepicker-custom/datepicker";
 @import "../air-datepicker-custom/navigation";
 @import "../air-datepicker-custom/timepicker";
+@import "__button/datepicker__filter__button";
 
-.date-picker {
+.datepicker__filter {
   width: 150px;
   height: 44px;
   background: #FFFFFF;
@@ -14,30 +15,33 @@
   text-indent: 15px;
 }
 
-.date-picker ::-webkit-input-placeholder {
+.datepicker__filter ::-webkit-input-placeholder {
   color:$darkShade75;
   font-size: 14px;
   line-height: 18px;
   text-overflow: ellipsis;
 }
 
-.date-picker ::-moz-placeholder {
+.datepicker__filter ::-moz-placeholder {
   color:$darkShade75;
   font-size: 14px;
   line-height: 18px;
   text-overflow: ellipsis;
 }
 
-.date-picker :-moz-placeholder {
+.datepicker__filter :-moz-placeholder {
   color:$darkShade75;
   font-size: 14px;
   line-height: 18px;
   text-overflow: ellipsis;
 }
 
-.date-picker :-ms-input-placeholder {
+.datepicker__filter :-ms-input-placeholder {
   color:$darkShade75;
   font-size: 14px;
   line-height: 18px;
   text-overflow: ellipsis;
 }
+
+
+

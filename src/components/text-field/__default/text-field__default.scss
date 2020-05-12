@@ -1,0 +1,39 @@
+@import "../../../components/colors/colors";
+
+.text-field__default {
+  width: 320px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid $darkShade25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-indent: 15px;
+}
+
+.text-field__default::-webkit-input-placeholder {
+  color:$darkShade25;
+  font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+}
+
+.text-field__default::-moz-placeholder {
+  color:$darkShade25;
+  font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+}
+
+.text-field__default:-moz-placeholder {
+  color:$darkShade25;
+  font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+}
+
+.text-field__default:-ms-input-placeholder {
+  color:$darkShade25;
+  font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+}

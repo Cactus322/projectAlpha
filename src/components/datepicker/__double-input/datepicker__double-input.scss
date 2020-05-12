@@ -1,0 +1,44 @@
+@import "../air-datepicker-custom/datepicker-config";
+@import "../air-datepicker-custom/cell";
+@import "../air-datepicker-custom/datepicker";
+@import "../air-datepicker-custom/navigation";
+@import "../air-datepicker-custom/timepicker";
+@import "./__button/datepicker__double-input__button";
+
+.datepicker__double-input {
+  width: 150px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid $darkShade25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-indent: 15px;
+}
+
+.datepicker__double-input ::-webkit-input-placeholder {
+  color:$darkShade75;
+  font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+}
+
+.datepicker__double-input ::-moz-placeholder {
+  color:$darkShade75;
+  font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+}
+
+.datepicker__double-input :-moz-placeholder {
+  color:$darkShade75;
+  font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+}
+
+.datepicker__double-input :-ms-input-placeholder {
+  color:$darkShade75;
+  font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+}

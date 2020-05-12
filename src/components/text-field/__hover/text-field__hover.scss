@@ -1,0 +1,48 @@
+@import "../../../components/colors/colors";
+@import "./_mini/text-field__hover_mini";
+
+.text-field__hover {
+  width: 320px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid $darkShade25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-indent: 15px;
+}
+
+.text-field__hover::-webkit-input-placeholder {
+  font-family: Montserrat;
+  color:$darkShade75;
+  font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+  text-transform: uppercase !important;
+}
+
+.text-field__hover::-moz-placeholder {
+  font-family: Montserrat;
+  color:$darkShade75;
+  font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+  text-transform: uppercase !important;
+}
+
+.text-field__hover:-moz-placeholder {
+  font-family: Montserrat;
+  color:$darkShade75;
+  font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+  text-transform: uppercase !important;
+}
+
+.text-field__hover:-ms-input-placeholder {
+  font-family: Montserrat;
+  color:$darkShade75;
+  font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+  text-transform: uppercase !important;
+}

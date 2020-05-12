@@ -1,10 +1,14 @@
-$('#start_datepicker').datepicker({
+let myDatepicker = $('#start_datepicker').datepicker({
     minDate: new Date,
     clearButton: true,
 
     onShow: function(dp, animationCompleted) {
+        $('#datepicker_button').click(function () {
+            dp.show();
+        });
+
         if (!animationCompleted) {
-            $('.datepicker--button-apply').click(function() {
+            $('.datepicker-__button-apply').click(function() {
                 dp.hide();
             })
         }
@@ -14,7 +18,7 @@ $('#start_datepicker').datepicker({
         $("#start_datepicker").val(fd.split("-")[0]);
         $("#end_datepicker").val(fd.split("-")[1]);
     },
-});
+}).data('datepicker');
 
-$('div.datepicker--buttons').append('<button class="datepicker--button-apply">Применить</button>');
-$('nav div.datepicker--nav-action').append('<h2>123</h2>');
+myDatepicker.show();
+myDatepicker.hide();

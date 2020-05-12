@@ -1,7 +1,7 @@
-@import "../colors/colors";
-@import "../block/block";
-@import "../block/margin/block_margin_first";
-@import "../block/margin/block_margin_second";
+@import "../../components/colors/colors";
+@import "../../components/block/block";
+@import "../../components/block/_margin/block_margin_first";
+@import "../../components/block/_margin/block_margin_second";
 
 .darkShade100 {
   background: $darkShade100;

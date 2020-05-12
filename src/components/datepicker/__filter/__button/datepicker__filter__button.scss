@@ -1,0 +1,18 @@
+.filter__datepicker__button {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: none;
+  outline: none;
+  position: relative;
+  bottom: 44px;
+  left: 275px;
+}
+
+.datepicker__button__svg-color {
+  fill: $darkShade50;
+
+  &:hover {
+    fill: $darkShade75;
+  }
+}

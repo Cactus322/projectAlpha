@@ -1,2 +1,79 @@
 @import "../fonts/fonts";
 @import "../../components/colors/colors";
+@import "../../components/text-field/__default/text-field__default";
+@import "../../components/text-field/__hover/text-field__hover";
+@import "../../components/dropdown/dropdown";
+@import "../../components/datepicker/__double-input/datepicker__double-input";
+@import "../../components/datepicker/__filter/datepicker__filter";
+
+
+.form-elements {
+  background-color: #ffffff;
+}
+
+.form_logo-gray {
+  margin: 30px 0 65px 30px;
+}
+
+.form_grid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 30px;
+}
+
+.row-2 {
+  margin-top: 20.44px;
+}
+
+.row-3 {
+  margin-top: 20px;
+}
+
+.row-4 {
+  margin-top: 22.56px;
+}
+
+.row-5 {
+  margin-top: 40px;
+}
+
+.row-6 {
+  margin-top: 40.56px;
+}
+
+.comment-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 30px;
+}
+
+.datepicker-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 27px;
+}
+
+.margin_text-field {
+  margin-left: 141px;
+}
+
+.style_text-field {
+  margin-left: 15px;
+  color: $darkShade50;
+}
+
+.row-2_style_text-field {
+  margin-left: -17px;
+  color: $darkShade50;
+}
+
+.row-3_style_dropdown {
+  margin-left: 14px;
+  color: $darkShade50;
+}
+
+.datepicker__filter__field-width {
+  width: 320px;
+  text-transform: lowercase;
+}
+
