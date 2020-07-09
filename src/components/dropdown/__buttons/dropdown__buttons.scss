@@ -1,0 +1,28 @@
+.dropdown__buttons {
+  margin-top: 19px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dropdown__button-apply {
+  font-family: Montserrat-Bold;
+  font-size: 12px;
+  color: $purple;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  background: #FFFFFF;
+  margin-right: -9px;
+}
+
+.dropdown__button-clear {
+  font-family: Montserrat-Bold;
+  font-size: 12px;
+  color: $darkShade50;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  background: #FFFFFF;
+  padding-left: 4px;
+}

@@ -1,30 +1,6 @@
 @import "../../components/colors/colors";
+@import "__buttons/dropdown__buttons";
 @import "../../scss/fonts/fonts";
-
-p {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1f2041
-}
-
-/*.dropdown {
-  width: 320px;
-  height: 44px;
-  background: #FFFFFF;
-  border: 1px solid $darkShade25;
-  box-sizing: border-box;
-  border-radius: 4px;
-
-}
-
-select:invalid {
-  color: $darkShade75;
-  padding-left: 15px;
-}*/
 
 .dropdown {
   position: relative;
@@ -33,9 +9,11 @@ select:invalid {
   background: #ffffff;
   border-radius: 4px;
 }
+
 .dropdown > div {
   padding: 10px;
 }
+
 .absolute .dropdown-list {
   position: absolute;
   top: 40px;
@@ -44,13 +22,22 @@ select:invalid {
   box-sizing: border-box;
   z-index: 1;
 }
-.dropdown__name{
+
+.dropdown__name {
+  font-family: Montserrat;
+  font-size: 14px;
+  color: $darkShade75;
   border: 1px solid $darkShade25;
-  border-radius: 4px;
-  /*border-top-left-radius: 4px;
-  border-top-right-radius: 4px;*/
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
   cursor: pointer;
 }
+
+.dropdown__name-disabled {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
 .dropdown-list {
   display: none;
   border: 1px solid $darkShade25;
@@ -63,20 +50,35 @@ select:invalid {
 }
 
 .dropdown-list__item {
+  font-family: Montserrat-Bold;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
   width: 100%;
-  padding:10px;
+  padding: 3px 123px 19px 5px;
 }
+
+.dropdown-list__item-second {
+  font-family: Montserrat-Bold;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 3px 123px 19px 5px;
+}
+
 .controls {
-  display: inline;
+  display: flex;
   text-align: right;
   float: right;
-  cursor: pointer;
   padding: 0;
   margin: 0;
 }
 .controls div{
-  display: inline-block;
-  padding: 0 10px;
+  padding: 0px 10px 12px 10px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 12px;
 }
 .disabled {
   color: red;
@@ -84,4 +86,41 @@ select:invalid {
 /*Фикс первого дропдауна если оба открыты надеюсь больше 2 не будет))) */
 .dropdown.absolute:nth-child(1) .dropdown-list  {
   z-index: 2;
+}
+
+.plus {
+  font-family: Montserrat;
+  font-size: 18px;
+  margin-top: -6px;
+  margin-right: 0px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $darkShade25;
+  border-radius: 22px;
+  color: $darkShade50;
+  background-color: #FFFFFF;
+  outline: none;
+}
+
+.minus {
+  font-family: Montserrat;
+  font-size: 18px;
+  margin-top: -6px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $darkShade25;
+  border-radius: 22px;
+  color: $darkShade50;
+  background-color: #FFFFFF;
+  outline: none;
+}
+
+.dropdown__button-clear-hidden {
+  visibility: hidden;
+  position: absolute;
+}
+
+.dropdown__button-clear-hidden-zero {
+  visibility: hidden;
+  position: absolute;
 }

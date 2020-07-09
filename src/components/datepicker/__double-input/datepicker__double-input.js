@@ -3,13 +3,23 @@ let myDatepicker = $('#start_datepicker').datepicker({
     clearButton: true,
 
     onShow: function(dp, animationCompleted) {
-        $('#datepicker_button').click(function () {
+        $('#start_datepicker_button').click(function () {
+            dp.show();
+        });
+
+        $('#end_datepicker_button').click(function () {
             dp.show();
         });
 
         if (!animationCompleted) {
-            $('.datepicker-__button-apply').click(function() {
+            $('.datepicker-__buttons-apply').click(function() {
                 dp.hide();
+            })
+        }
+
+        if (!animationCompleted) {
+            $('#end_datepicker').click(function () {
+                dp.show();
             })
         }
     },

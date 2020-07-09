@@ -9,7 +9,7 @@ let myFilterDatepicker = $('#filter_datepicker').datepicker({
         });
 
         if (!animationCompleted) {
-            $('.datepicker-__button-apply').click(function() {
+            $('.datepicker-__buttons-apply').click(function() {
                 dp.hide();
             })
         }

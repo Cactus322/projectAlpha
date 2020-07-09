@@ -1,34 +1,35 @@
-//Словоформы честно взяты отсюда https://realadmin.ru/coding/sklonenie-na-javascript.html
-function num2str(n, text_forms) {
-    n = Math.abs(n) % 100; var n1 = n % 10;
+function declension(n, text_forms) {
+    n = Math.abs(n) % 100;
+    let n1 = n % 10;
     if (n > 10 && n < 20) { return text_forms[2]; }
     if (n1 > 1 && n1 < 5) { return text_forms[1]; }
     if (n1 == 1) { return text_forms[0]; }
     return text_forms[2];
 }
-//Обновлялка текста в шапке dropDown
-function updateDropdowns(){
-    let dropdowns = document.querySelectorAll('.dropdown')
+
+function updateDropdown(){
+    let value = 0;
+    let dropdowns = document.querySelectorAll('.dropdown');
     dropdowns.forEach(dropdown => {
         //Если сложная шапка для dropdown в названии выводим значения из нескольких итемов
         if(dropdown.hasAttribute('several-word-forms')) {
-            let result = ''
-            let sum = 0
-            let defaultValue = dropdown.getAttribute('default')
+            let result = '';
+            let value;
+            let sum = 0;
+            let defaultValue = dropdown.getAttribute('default');
             dropdown.querySelectorAll('.dropdown-list__item').forEach(item =>{
                 // Получаем все Элементы dropdown cо словоформами
                 if(item.hasAttribute('wordForms')){
                     //Получаем Value
-                    let elValue = item.querySelectorAll('.value')
-                    let value
+                    let elValue = item.querySelectorAll('.value');
                     elValue.forEach(valueItem =>{
-                        value = Number.parseInt(valueItem.innerText)
-                        sum += Number.parseInt(valueItem.innerText)
-                    })
+                        value = Number.parseInt(valueItem.innerText);
+                        sum += Number.parseInt(valueItem.innerText);
+                    });
                     //Получаем словоформу
                     if(value > 0){
-                        let wordForms = item.getAttribute('wordForms').split(' ')
-                        let rightForm = num2str(value, wordForms)
+                        let wordForms = item.getAttribute('wordForms').split(' ');
+                        let rightForm = declension(value, wordForms);
                         result += ' ' + value + ' ' + rightForm
                     }}
                 //Пишем в заголовок дропдауна результат
@@ -38,82 +39,185 @@ function updateDropdowns(){
                 else{
                     dropdown.querySelector('.dropdown__name').innerText = defaultValue
                 }
-            })
+            });
         }
-        //Простая форма dropdown - Типа сколько гостей
-        else{
-            //Получаем сумму всех у dropdown записываем в value
-            let valuesElements = dropdown.querySelectorAll('.value')
-            let value = 0
+        else {
+            let valuesElements = dropdown.querySelectorAll('.value');
             valuesElements.forEach(valueItem => {
                 value += (Number.parseInt(valueItem.innerText))
-            })
+            });
             //Получаем словоформы и записываем в массив
-            let wordForms = dropdown.hasAttribute('wordforms') ? dropdown.getAttribute('wordforms').split(' '): undefined
-            let rightForm = wordForms !== undefined ? num2str(value, wordForms): ''
+            let wordForms = dropdown.hasAttribute('wordforms') ? dropdown.getAttribute('wordforms').split(' ') : undefined;
+            let rightForm = wordForms !== undefined ? declension(value, wordForms) : '';
             //Записываем в название dropdow значение всех
-            if(value !==0){
-                dropdown.querySelector('.dropdown__name').innerText = value+' '+rightForm
-            }
-            else{
-                dropdown.querySelector('.dropdown__name').innerText = dropdown.hasAttribute("default") ? dropdown.getAttribute('default'): dropdown.querySelector('.dropdown__name').innerText = value+' '+rightForm
+            if (value !== 0) {
+                dropdown.querySelector('.dropdown__name').innerText = value + ' ' + rightForm
+            } else {
+                dropdown.querySelector('.dropdown__name').innerText = dropdown.hasAttribute("default") ? dropdown.getAttribute('default') : dropdown.querySelector('.dropdown__name').innerText = value + ' ' + rightForm
             }
         }
-    })
+        let valuesElementsSecond = dropdown.querySelectorAll('.valueSecond');
+        let valueSecond = 0;
+        valuesElementsSecond.forEach(valueItem => {
+            valueSecond += (Number.parseInt(valueItem.innerText))
+        });
+        //Получаем словоформы и записываем в массив
+        let wordFormsSecond = dropdown.hasAttribute('wordformSecond') ? dropdown.getAttribute('wordformSecond').split(' '): undefined;
+        let rightFormSecond = wordFormsSecond !== undefined ? declension(valueSecond, wordFormsSecond): '';
+        //Записываем в название dropdow значение всех
+        /*if(valueSecond !==0){
+            dropdown.querySelector('.dropdown__name').append(', ' + valueSecond+' '+rightForm)
+        }*/
+        if (value === 0 && valueSecond !==0) {
+            dropdown.querySelector('.dropdown__name').innerText = valueSecond+' '+rightFormSecond
+        }
+        else if (valueSecond >= 1 && valueSecond !== 0) {
+            dropdown.querySelector('.dropdown__name').append(', ' + valueSecond+' '+rightFormSecond)
+        }
+    });
+
+    /* let dropdownSecond = document.querySelectorAll('.dropdown');
+     dropdownSecond.forEach(dropdown => {
+         let valuesElementsSecond = dropdown.querySelectorAll('.valueSecond');
+         let valueSecond = 0;
+         valuesElementsSecond.forEach(valueItem => {
+             valueSecond += (Number.parseInt(valueItem.innerText))
+         });
+         //Получаем словоформы и записываем в массив
+         let wordForms = dropdown.hasAttribute('wordformSecond') ? dropdown.getAttribute('wordformSecond').split(' '): undefined;
+         let rightForm = wordForms !== undefined ? declension(valueSecond, wordForms): '';
+         //Записываем в название dropdow значение всех
+         if(valueSecond !==0){
+             dropdown.querySelector('.dropdown__name').append(', ' + valueSecond+' '+rightForm)
+         }
+     }*/
 }
 
-//Функция создания контролов управления
-function createControls(defaultValue){
-    let element = document.createElement('div')
-    let minus = document.createElement('div')
-    let value = document.createElement('div')
-    let plus = document.createElement('div')
-    element.className = 'controls'
-    value.className = 'value'
-    //Добавляем класс disabled если значение меньше чем 1
-    defaultValue < 1 ? minus.classList.add('disabled') :null
-    value.innerText = defaultValue
-    plus.innerText = '+'
-    plus.addEventListener('click', function(){
-        //Удаляем класс disabled у минуса если значение равно нулю
-        //если там было минус значение не удаляем:)
-        if(Number.parseInt(value.innerText) === 0){
-            minus.classList.remove('disabled')
+
+
+function createControls(defaultValue) {
+    let element = document.createElement('div');
+    let plus = document.createElement('button');
+    let minus = document.createElement('button');
+    let value = document.createElement('div');
+    let clear = document.createElement('button');
+    clear.className = 'dropdown__button-clear-hidden';
+    element.className = 'controls';
+    value.className = 'value zero';
+    value.innerText = defaultValue;
+    plus.className = 'plus';
+    minus.className = 'minus';
+    plus.innerText = '+';
+    plus.addEventListener('click', function () {
+        if(Number.parseInt(value.innerText) === 0) {
+            minus.classList.remove('disabled');
+            value.classList.remove('zero')
         }
-        value.innerText= Number.parseInt(value.innerText)+1
-        updateDropdowns()
-    })
-    minus.innerText = '-'
-    minus.addEventListener('click', function(){
-        //Добавляем класс disabled если значение равно 1
-        if(parseInt(value.innerText) === 1){
-            minus.classList.add('disabled')
+        value.innerText = Number.parseInt(value.innerText)+1
+        updateDropdown()
+    });
+    minus.innerText = '-';
+    minus.addEventListener('click', function () {
+        if(parseInt(value.innerText) === 1) {
+            minus.classList.add('disabled');
+            value.classList.add('zero')
         }
-        //Блокируем минус если значение ноль и меньше
         if(parseInt(value.innerText) > 0){
-            value.innerText= Number.parseInt(value.innerText)-1
+            value.innerText = Number.parseInt(value.innerText)-1
         }
-        updateDropdowns()
-    })
-    element.append(minus)
-    element.append(value)
-    element.append(plus)
-    return(element)
+        updateDropdown();
+    });
+    clear.addEventListener('click', function () {
+        value.innerText = '0';
+        updateDropdown();
+    });
+
+    element.append(minus);
+    element.append(value);
+    element.append(plus);
+    element.append(clear);
+    return(element);
 }
-document.addEventListener('DOMContentLoaded', function(){
-    //Получаем все дропдауны
-    let drop = document.querySelectorAll('.dropdown')
-    drop.forEach((item,i) => {
-        //Каждому дропдауну навешиваем событие открытия
-        let dropdownName = item.querySelector('.dropdown__name')
-        dropdownName.addEventListener('click', function(){
+
+function createControlsSecond(defaultValue) {
+    let element = document.createElement('div');
+    let valueSecond = document.createElement('div');
+    let plus = document.createElement('button');
+    let minus = document.createElement('button');
+    let clear = document.createElement('button');
+    clear.className = 'dropdown__button-clear-hidden-zero';
+    valueSecond.className = 'valueSecond zero';
+    valueSecond.innerText = defaultValue;
+    element.className = 'controls';
+    plus.className = 'plus';
+    minus.className = 'minus';
+    plus.innerText = '+';
+    plus.addEventListener('click', function () {
+        if(Number.parseInt(valueSecond.innerText) === 0) {
+            minus.classList.remove('disabled');
+            valueSecond.classList.remove('zero');
+            clear.classList.add('dropdown__button-clear-hidden');
+            clear.classList.remove('dropdown__button-clear-hidden-zero')
+        }
+        valueSecond.innerText = Number.parseInt(valueSecond.innerText)+1
+        updateDropdown()
+    });
+    minus.innerText = '-';
+    minus.addEventListener('click', function () {
+        if(parseInt(valueSecond.innerText) === 1) {
+            minus.classList.add('disabled');
+            valueSecond.classList.add('zero');
+            clear.classList.remove('dropdown__button-clear-hidden');
+            clear.classList.add('dropdown__button-clear-hidden-zero')
+        }
+        if(parseInt(valueSecond.innerText) > 0){
+            valueSecond.innerText = Number.parseInt(valueSecond.innerText)-1
+        }
+        updateDropdown()
+    });
+    clear.addEventListener('click', function () {
+        valueSecond.innerText = '0';
+        updateDropdown();
+    });
+
+    element.append(minus);
+    element.append(valueSecond);
+    element.append(plus);
+    element.append(clear);
+    return(element);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    let drop = document.querySelectorAll('.dropdown');
+    drop.forEach((item, i) => {
+        let dropdownName = item.querySelector('.dropdown__name');
+        dropdownName.addEventListener('click', function() {
             event.target.closest(".dropdown").classList.toggle("active")
-        })
-        //Получаем все итемы у текущего дропдауна
-        let listItems = item.querySelectorAll('.dropdown-list__item')
+        });
+        let listItems = item.querySelectorAll('.dropdown-list__item');
         listItems.forEach(item => {
             item.append(createControls(item.hasAttribute('default') ? item.getAttribute('default'):0))
-        })
-        updateDropdowns()
+        });
+        let listItemsSecond = item.querySelectorAll('.dropdown-list__item-second');
+        listItemsSecond.forEach(item => {
+            item.append(createControlsSecond(item.hasAttribute('default') ? item.getAttribute('default'):0))
+        });
+        updateDropdown()
     })
-})
+});
+
+$('.dropdown__name').click(function (event) {
+    $(this).toggleClass('dropdown__name-disabled');
+});
+
+$('.dropdown-list').append('<div class="dropdown__buttons"></div>');
+$('.dropdown__buttons').append('<input type="button" value="ОЧИСТИТЬ" class="dropdown__button-clear">').append('<input type="button" value="ПРИМЕНИТЬ" class="dropdown__button-apply">');
+
+$('input.dropdown__button-apply').click(function () {
+    $('div.dropdown').toggleClass('active');
+    $('div.dropdown__name').toggleClass('dropdown__name-disabled');
+});
+
+$('.dropdown__button-clear').click(function () {
+    $('.dropdown__button-clear-hidden').trigger('click')
+});
