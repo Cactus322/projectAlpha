@@ -5,6 +5,8 @@
 @import "../../components/dropdown/dropdown";
 @import "../../components/datepicker/__double-input/datepicker__double-input";
 @import "../../components/datepicker/__filter/datepicker__filter";
+@import "../../components/checkbox/checkbox";
+@import "../../components/radio/radio";
 
 
 .form-elements {
@@ -18,7 +20,6 @@
 .form_grid {
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  grid-gap: 30px;
 }
 
 .row-2 {
@@ -38,7 +39,36 @@
 }
 
 .row-6 {
-  margin-top: 40.56px;
+  margin-top: -4.56px;
+}
+
+.row-7 {
+  margin-top: -3px;
+}
+
+.row-8 {
+  margin-top: 64px;
+}
+
+.row-9 {
+  margin-top: 20px;
+}
+
+
+.row-10 {
+  margin-top: 173.44px;
+}
+
+.row-11 {
+  margin-top: 49px;
+}
+
+.row-12 {
+  margin-top: 102px;
+}
+
+.row-2-2 {
+  margin-top: 40.88px;
 }
 
 .comment-grid {
@@ -55,6 +85,10 @@
 
 .margin_text-field {
   margin-left: 141px;
+}
+
+.margin_text-field-2 {
+  margin-left: 126px;
 }
 
 .style_text-field {
@@ -77,3 +111,59 @@
   text-transform: lowercase;
 }
 
+.emotion-icon-style {
+  font-size: 48px;
+  line-height: 41px;
+  background: -webkit-linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.flex-group {
+  display: flex;
+  border-bottom: 1px solid;
+  border-color: rgba(31, 32, 65, 0.1);
+  width: 280px;
+}
+
+.flex-group-second {
+  display: flex;
+  border-bottom: 1px solid;
+  border-color: rgba(31, 32, 65, 0.1);
+  width: 280px;
+  margin-top: 20px;
+}
+
+.comfort-head-style {
+  font-family: Montserrat-Bold;
+  font-size: 14px;
+  color: $darkShade75;
+  margin-top: 1px;
+  margin-bottom: 0;
+}
+
+.comfort-text-style {
+  font-family: Montserrat;
+  font-size: 14px;
+  color: $darkShade75;
+  margin-top: 5px;
+  margin-bottom: 17px;
+}
+
+.checkbox-column {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  width: 222px;
+  margin-top: 16.56px;
+}
+
+.radio-buttons-row {
+  display: grid;
+  grid-template-columns: 98px 98px;
+  grid-gap: 30px;
+  font-family: Montserrat;
+  font-size: 14px;
+  color: $darkShade50;
+  margin-top: 16px;
+}

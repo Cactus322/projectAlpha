@@ -26,12 +26,12 @@ html(lang=ru)
                     div.comment-grid
                         p DROPDOWN
                         p.row-3_style_dropdown DEFAULT
-                    div.dropdown.absolute(wordforms="Гость Гостя Гостей" default="Сколько гостей?")
-                        div.dropdown__name Сколько гостей?
+                    div.dropdown.absolute(wordformSecond="Младенец Младенца Младенцев" wordforms="Гость Гостя Гостей" default="Сколько гостей?")
+                        div.dropdown__name.dropdown__name-disabled Сколько гостей?
                         div.dropdown-list
                             div.dropdown-list__item(name="adult") Взрослые
                             div.dropdown-list__item(name="child") Дети
-                            div.dropdown-list__item(name="babes") Младенцы
+                            div.dropdown-list__item-second(name="babes") Младенцы
                 div.row-4
                     div
                         div.comment-grid
@@ -41,7 +41,123 @@ html(lang=ru)
                 div.row-5.datepicker-grid
                     div
                         p DATE DROPDOWN
-                        input#start_datepicker.datepicker-here.date-picker(type="text" placeholder="ДД.ММ.ГГГГ" data-range="true" data-multiple-dates-separator=" - ")
+                        input#start_datepicker.text-field__hover_mini.placeholder-uppercase(type="text" placeholder="ДД.ММ.ГГГГ" data-range="true" data-multiple-dates-separator=" - ")
+                        button#start_datepicker_button.start__datepicker__button
+                            svg(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path.datepicker__button__svg-color(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z")
                     div
                         p DATE DROPDOWN
-                        input#end_datepicker.date-picker(type="text" placeholder="ДД.ММ.ГГГГ")
+                        input#end_datepicker.text-field__hover_mini.placeholder-uppercase(type="text" placeholder="ДД.ММ.ГГГГ")
+                        button#end_datepicker_button.end__datepicker__button
+                            svg(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path.datepicker__button__svg-color(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z")
+                div.row-6
+                    p.text-bold FILTER DATE DROPDOWN
+                    input#filter_datepicker.text-field__hover.placeholder-uppercase(type="text" placeholder="ДД.ММ.ГГГГ" data-range="true" data-multiple-dates-separator=" - ")
+                    button#filter_datepicker_button.filter__datepicker__button
+                        svg.datepicker__button__svg-color(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z")
+                div.row-7
+                    p.text-bold SUBSCRIPTION TEXT FIELD
+                    input.text-field__default(type="Email" placeholder="Email")
+                    button.text-field__button
+                        svg.text-field__button-color(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z")
+                            defs
+                                linearGradient#myGradient(x1="0" x2="0" y1="0" y2="1")
+                                    stop(offset="0%"  stop-color="#BC9CFF")
+                                    stop(offset="100%" stop-color="#8BA4F9")
+                div.row-8
+                    div.comment-grid
+                        p DROPDOWN
+                        p.row-3_style_dropdown DEFAULT
+                    div.dropdown.absolute(wordformSecond="Младенец Младенца Младенцев" wordforms="Гость Гостя Гостей" default="Сколько гостей?")
+                        div.dropdown__name.dropdown__name-disabled Сколько гостей?
+                        div.dropdown-list
+                            div.dropdown-list__item(name="adult") Взрослые
+                            div.dropdown-list__item(name="child") Дети
+                            div.dropdown-list__item-second(name="babes") Младенцы
+                div.row-9
+                    div.comment-grid
+                        p DROPDOWN
+                        p.row-3_style_dropdown DEFAULT
+                    div.dropdown.absolute.active(wordformSecond="Младенец Младенца Младенцев" wordforms="Гость Гостя Гостей" default="Сколько гостей?")
+                        div.dropdown__name Сколько гостей?
+                        div.dropdown-list
+                            div.dropdown-list__item(name="adult") Взрослые
+                            div.dropdown-list__item(name="child") Дети
+                            div.dropdown-list__item-second(name="babes") Младенцы
+                div.row-10
+                    div.checkbox-list
+                        span.checkbox-list-span EXPANDABLE CHECKBOX LIST
+                        ul.checkbox-list-items
+                            li.checkbox-list-flex
+                                input#checkboxElementForLabel-1.checkbox-element(type="checkbox")
+                                label(for="checkboxElementForLabel-1") Завтрак
+                            li.checkbox-list-flex
+                                input#checkboxElementForLabel-2.checkbox-element(type="checkbox")
+                                label(for="checkboxElementForLabel-2") Письменный стол
+                            li.checkbox-list-flex
+                                input#checkboxElementForLabel-3.checkbox-element(type="checkbox")
+                                label(for="checkboxElementForLabel-3") Стул для кормления
+                            li.checkbox-list-flex
+                                input#checkboxElementForLabel-4.checkbox-element(type="checkbox")
+                                label(for="checkboxElementForLabel-4") Кроватка
+                            li.checkbox-list-flex
+                                input#checkboxElementForLabel-5.checkbox-element(type="checkbox")
+                                label(for="checkboxElementForLabel-5") Телевизор
+                            li.checkbox-list-flex
+                                input#checkboxElementForLabel-6.checkbox-element(type="checkbox")
+                                label(for="checkboxElementForLabel-6") Шампунь
+                div.row-11
+                    div.checkbox-list
+                        span.checkbox-list-span EXPANDABLE CHECKBOX LIST
+                        ul.checkbox-list-items.active
+                            li.checkbox-list-flex
+                                input#checkboxElementForLabel-1-2.checkbox-element(type="checkbox")
+                                label(for="checkboxElementForLabel-1-2") Завтрак
+                            li.checkbox-list-flex
+                                input#checkboxElementForLabel-2-2.checkbox-element(type="checkbox")
+                                label(for="checkboxElementForLabel-2-2") Письменный стол
+                            li.checkbox-list-flex
+                                input#checkboxElementForLabel-3-2.checkbox-element(type="checkbox")
+                                label(for="checkboxElementForLabel-3-2") Стул для кормления
+                            li.checkbox-list-flex
+                                input#checkboxElementForLabel-4-2.checkbox-element(type="checkbox")
+                                label(for="checkboxElementForLabel-4-2") Кроватка
+                            li.checkbox-list-flex
+                                input#checkboxElementForLabel-5-2.checkbox-element(type="checkbox")
+                                label(for="checkboxElementForLabel-5-2") Телевизор
+                            li.checkbox-list-flex
+                                input#checkboxElementForLabel-6-2.checkbox-element(type="checkbox")
+                                label(for="checkboxElementForLabel-6-2") Шампунь
+                div.row-12
+                    div.flex-group
+                        div
+                            i.material-icons.emotion-icon-style insert_emoticon
+                        div
+                            h3.comfort-head-style Комфорт
+                            p.comfort-text-style Шумопоглощающие стены
+                    div.flex-group-second
+                        div
+                            i.material-icons.emotion-icon-style location_city
+                        div
+                            h3.comfort-head-style Удобство
+                            p.comfort-text-style Окно в каждой из спален
+            section.margin_text-field-2
+                div
+                    h3 CHECKBOX BUTTONS
+                    div.checkbox-column
+                        input#checkboxElementForLabel-1-3.checkbox-element(type="checkbox")
+                        label(for="checkboxElementForLabel-1-3") Можно курить
+                        input#checkboxElementForLabel-2-3.checkbox-element(type="checkbox")
+                        label(for="checkboxElementForLabel-2-3") Можно с питомцами
+                        input#checkboxElementForLabel-3-3.checkbox-element(type="checkbox")
+                        label(for="checkboxElementForLabel-3-3") Можно пригласить гостей (до 10 человек)
+                div.row-2-2
+                    h3 RADIO BUTTONS
+                    div.radio-buttons-row
+                        input#radioButtonForLabel-1.radio-element(type="radio" value="1" name="radio")
+                        label(for="radioButtonForLabel-1") Мужчина
+                        input#radioButtonForLabel-2.radio-element(type="radio" value="2" name="radio")
+                        label(for="radioButtonForLabel-2") Женщина

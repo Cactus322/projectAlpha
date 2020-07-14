@@ -1,28 +1,45 @@
 @font-face {
   font-family: "OpenSans";
-  src: url("../../components/fonts/OpenSans-Regular/OpenSans-Regular.ttf");
-  src: url("../../components/fonts/OpenSans-Regular/OpenSans-Regular.ttf") format("ttf"),
-       url("../../components/fonts/OpenSans-Regular/OpenSans-Regular.woff") format("woff"),
-       url("../../components/fonts/OpenSans-Regular/OpenSans-Regular.svg") format("svg");
+  src: url("../../components/fonts/regular/OpenSans-Regular/OpenSans-Regular.ttf");
+  src: url("../../components/fonts/regular/OpenSans-Regular/OpenSans-Regular.ttf") format("ttf"),
+       url("../../components/fonts/regular/OpenSans-Regular/OpenSans-Regular.woff") format("woff"),
+       url("../../components/fonts/regular/OpenSans-Regular/OpenSans-Regular.svg") format("svg");
   font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../../components/fonts/bold/OpenSans-Bold/OpenSans-Bold.ttf");
+  src: url("../../components/fonts/bold/OpenSans-Bold/OpenSans-Bold.ttf") format("ttf"),
+  url("../../components/fonts/bold/OpenSans-Bold/OpenSans-Bold.woff") format("woff"),
+  url("../../components/fonts/bold/OpenSans-Bold/OpenSans-Bold.svg") format("svg");
 }
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../../components/fonts/Montserrat-Regular/Montserrat-Regular.ttf");
-  src: url("../../components/fonts/Montserrat-Regular/Montserrat-Regular.ttf") format("ttf"),
-       url("../../components/fonts/Montserrat-Regular/Montserrat-Regular.woff") format("woff"),
-       url("../../components/fonts/Montserrat-Regular/Montserrat-Regular.svg") format("svg");
+  src: url("../../components/fonts/regular/Montserrat-Regular/Montserrat-Regular.ttf");
+  src: url("../../components/fonts/regular/Montserrat-Regular/Montserrat-Regular.ttf") format("ttf"),
+       url("../../components/fonts/regular/Montserrat-Regular/Montserrat-Regular.woff") format("woff"),
+       url("../../components/fonts/regular/Montserrat-Regular/Montserrat-Regular.svg") format("svg");
   font-style: normal;
 }
 
 @font-face {
-  font-family: "MaterialIcons";
-  src: url("../../components/fonts/MaterialIcons-Regular/MaterialIcons-Regular.ttf");
-  src: url("../../components/fonts/MaterialIcons-Regular/MaterialIcons-Regular.ttf") format("ttf"),
-       url("../../components/fonts/MaterialIcons-Regular/MaterialIcons-Regular.woff") format("woff"),
-       url("../../components/fonts/MaterialIcons-Regular/MaterialIcons-Regular.svg") format("svg");
+  font-family: "Montserrat-Bold";
+  src: url("../../components/fonts/bold/Montserrat-Bold/Montserrat-Bold.ttf");
+  src: url("../../components/fonts/bold/Montserrat-Bold/Montserrat-Bold.ttf") format("ttf"),
+       url("../../components/fonts/bold/Montserrat-Bold/Montserrat-Bold.woff") format("woff"),
+       url("../../components/fonts/bold/Montserrat-Bold/Montserrat-Bold.svg") format("svg");
 }
+
+@font-face {
+  font-family: "MaterialIcons";
+  src: url("../../components/fonts/regular/MaterialIcons-Regular/MaterialIcons-Regular.ttf");
+  src: url("../../components/fonts/regular/MaterialIcons-Regular/MaterialIcons-Regular.ttf") format("ttf"),
+       url("../../components/fonts/regular/MaterialIcons-Regular/MaterialIcons-Regular.woff") format("woff"),
+       url("../../components/fonts/regular/MaterialIcons-Regular/MaterialIcons-Regular.svg") format("svg");
+}
+
 
 h1 {
   font-family: "OpenSans";
@@ -38,17 +55,16 @@ h2 {
 
 h3 {
   font-family: "Montserrat";
-  font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  font-weight: bold;
 }
 
 p {
   font-family: "Montserrat";
-  font-weight: normal;
+  font-style: normal;
   font-size: 14px;
   line-height: 24px;
+  color: #1f2041
 }
 
 .material-icons {
@@ -74,4 +90,12 @@ p {
 
   /* Support for IE. */
   font-feature-settings: 'liga';
+}
+
+.header-bold {
+  font-family: "OpenSans-Bold";
+}
+
+.text-bold {
+  font-family: "Montserrat-Bold";
 }

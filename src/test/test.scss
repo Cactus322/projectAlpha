@@ -1,0 +1,53 @@
+.dropdown {
+  position: relative;
+  max-width: 320px;
+  margin: 10px;
+}
+.dropdown > div {
+  padding: 10px;
+}
+.absolute .dropdown-list {
+  position: absolute;
+  top: 40px;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.dropdown__name{
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+.dropdown-list {
+  display: none;
+  border: 1px solid black;
+  border-top: none;
+}
+
+.dropdown.active .dropdown-list {
+  display: block;
+}
+
+.dropdown-list__item {
+  width: 100%;
+  padding:10px;
+}
+.controls {
+  display: inline;
+  text-align: right;
+  float: right;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+.controls div{
+  display: inline-block;
+  padding: 0 10px;
+}
+.disabled {
+  color: red;
+}
+/*Фикс первого дропдауна если оба открыты надеюсь больше 2 не будет))) */
+.dropdown.absolute:nth-child(1) .dropdown-list  {
+  z-index: 2;
+}

@@ -1,5 +1,6 @@
 @import "../../../components/colors/colors";
 @import "./_mini/text-field__hover_mini";
+@import "../__button/text-field__button";
 
 .text-field__hover {
   width: 320px;
@@ -17,7 +18,6 @@
   font-size: 14px;
   line-height: 18px;
   text-overflow: ellipsis;
-  text-transform: uppercase !important;
 }
 
 .text-field__hover::-moz-placeholder {
@@ -26,7 +26,6 @@
   font-size: 14px;
   line-height: 18px;
   text-overflow: ellipsis;
-  text-transform: uppercase !important;
 }
 
 .text-field__hover:-moz-placeholder {
@@ -35,7 +34,6 @@
   font-size: 14px;
   line-height: 18px;
   text-overflow: ellipsis;
-  text-transform: uppercase !important;
 }
 
 .text-field__hover:-ms-input-placeholder {
@@ -44,5 +42,20 @@
   font-size: 14px;
   line-height: 18px;
   text-overflow: ellipsis;
+}
+
+.placeholder-uppercase::-webkit-input-placeholder {
+  text-transform: uppercase !important;
+}
+
+.placeholder-uppercase::-moz-placeholder {
+  text-transform: uppercase !important;
+}
+
+.placeholder-uppercase:-moz-placeholder {
+  text-transform: uppercase !important;
+}
+
+.placeholder-uppercase:-ms-input-placeholder {
   text-transform: uppercase !important;
 }
