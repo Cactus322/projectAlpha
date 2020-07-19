@@ -8,6 +8,7 @@
   border: none;
   outline: none;
   border-radius: 22px;
+  cursor: pointer;
 }
 
 .buttons__full-gradient.disable{
@@ -21,4 +22,5 @@
   outline: none;
   border-radius: 22px;
   opacity: 0.5;
+  cursor: default;
 }

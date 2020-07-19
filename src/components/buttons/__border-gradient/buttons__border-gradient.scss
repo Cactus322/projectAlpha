@@ -9,6 +9,7 @@
   margin: auto;
   position: relative;
   padding-left: 17px;
+  padding-top: 2px;
   box-sizing: border-box;
   outline: none;
   color: $purple;
@@ -16,6 +17,7 @@
   background-clip: padding-box; /* !importanté */
   border: solid 2px transparent; /* !importanté */
   border-radius: 22px;
+  cursor: pointer;
 
   &:before {
     content: '';
@@ -39,6 +41,7 @@
   margin: auto;
   position: relative;
   padding-left: 17px;
+  padding-top: 2px;
   box-sizing: border-box;
   outline: none;
   color: rgba(188, 156, 255, 0.5);
@@ -46,6 +49,7 @@
   background-clip: padding-box; /* !importanté */
   border: solid 2px transparent; /* !importanté */
   border-radius: 22px;
+  cursor: default;
 
   &:before {
     content: '';
