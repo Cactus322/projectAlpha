@@ -10,6 +10,9 @@
 @import "../../components/buttons/__rate/buttons__rate";
 @import "../../components/buttons/__like/buttons__like";
 @import "../../components/range-slider/range-slider";
+@import "../../components/buttons/__full-gradient/buttons__full-gradient";
+@import "../../components/buttons/__border-gradient/buttons__border-gradient";
+@import "../../components/buttons/__only-text/buttons__only-text";
 
 
 .form-elements {
@@ -232,4 +235,19 @@
   color: $darkShade50;
   width: 236px;
   padding-left: 30px;
+}
+
+.buttons-row {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 99px 99px;
+  grid-gap: 20px;
+  margin-bottom: 30px;
+}
+
+.buttons-row-2 {
+  display: grid;
+  grid-template-columns: 61px 61px;
+  grid-gap: 20px;
+  margin-bottom: 30px;
 }

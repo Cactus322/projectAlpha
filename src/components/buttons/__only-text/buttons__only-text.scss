@@ -1,0 +1,20 @@
+.buttons__only-text {
+  font-family: Montserrat-Bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: $purple;
+  border: none;
+  outline: none;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+.buttons__only-text.disable {
+  font-family: Montserrat-Bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: $darkShade50;
+  border: none;
+  outline: none;
+  background: #FFFFFF;
+}
