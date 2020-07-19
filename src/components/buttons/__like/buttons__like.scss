@@ -1,0 +1,63 @@
+.like__button {
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px solid $darkShade25;
+  outline: none;
+  display: grid;
+  grid-template-columns: 10px 20px;
+}
+
+.like__button i {
+  font-size: 10px;
+  line-height: 9px;
+  color: $darkShade25;
+  margin-top: 4px;
+}
+
+.like__button span {
+  font-family: Montserrat;
+  font-size: 10px;
+  line-height: 12px;
+  color: $darkShade25;
+  margin-top: 3px;
+}
+
+.like__button-second {
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px solid $darkShade25;
+  outline: none;
+  display: grid;
+  grid-template-columns: 10px 20px;
+}
+
+.like__button-second i {
+  font-size: 10px;
+  line-height: 9px;
+  color: $darkShade25;
+  margin-top: 4px;
+}
+
+.like__button-second span {
+  font-family: Montserrat;
+  font-size: 10px;
+  line-height: 12px;
+  color: $darkShade25;
+  margin-top: 3px;
+}
+
+.liked {
+  border: 1px solid $purple;
+}
+
+.liked i {
+  color: $purple
+}
+
+.liked span {
+  color: $purple
+}

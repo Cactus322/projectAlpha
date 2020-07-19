@@ -7,6 +7,9 @@
 @import "../../components/datepicker/__filter/datepicker__filter";
 @import "../../components/checkbox/checkbox";
 @import "../../components/radio/radio";
+@import "../../components/buttons/__rate/buttons__rate";
+@import "../../components/buttons/__like/buttons__like";
+@import "../../components/range-slider/range-slider";
 
 
 .form-elements {
@@ -71,6 +74,30 @@
   margin-top: 40.88px;
 }
 
+.row-3-2 {
+  margin-top: 36.56px;
+}
+
+.row-4-2 {
+  margin-top: 44.44px;
+}
+
+.row-5-2 {
+  margin-top: 40px;
+}
+
+.row-6-2 {
+  margin-top: 196px;
+}
+
+.row-7-2 {
+  margin-top: 256px;
+}
+
+.row-2-3 {
+  margin-top: 43px;
+}
+
 .comment-grid {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -89,6 +116,10 @@
 
 .margin_text-field-2 {
   margin-left: 126px;
+}
+
+.margin_text-field-3 {
+  margin-left: 72px;
 }
 
 .style_text-field {
@@ -159,11 +190,46 @@
 }
 
 .radio-buttons-row {
-  display: grid;
-  grid-template-columns: 98px 98px;
-  grid-gap: 30px;
   font-family: Montserrat;
   font-size: 14px;
   color: $darkShade50;
   margin-top: 16px;
+}
+
+.checkbox-toggle-row {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 15px;
+  font-family: Montserrat;
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+.rating-area-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 120px 120px;
+  grid-gap: 20px;
+  width: 260px;
+}
+
+.like__button-column {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 40px 40px;
+}
+
+.rich-checkbox-row {
+  display: grid;
+  grid-template-rows: 48px 48px;
+  grid-gap: 20px;
+}
+
+.rich-checkbox-row p {
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 14px;
+  color: $darkShade50;
+  width: 236px;
+  padding-left: 30px;
 }

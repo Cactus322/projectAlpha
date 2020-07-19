@@ -64,10 +64,7 @@ function updateDropdown(){
         //Получаем словоформы и записываем в массив
         let wordFormsSecond = dropdown.hasAttribute('wordformSecond') ? dropdown.getAttribute('wordformSecond').split(' '): undefined;
         let rightFormSecond = wordFormsSecond !== undefined ? declension(valueSecond, wordFormsSecond): '';
-        //Записываем в название dropdow значение всех
-        /*if(valueSecond !==0){
-            dropdown.querySelector('.dropdown__name').append(', ' + valueSecond+' '+rightForm)
-        }*/
+        //Записываем в название dropdown значение всех
         if (value === 0 && valueSecond !==0) {
             dropdown.querySelector('.dropdown__name').innerText = valueSecond+' '+rightFormSecond
         }
@@ -75,22 +72,6 @@ function updateDropdown(){
             dropdown.querySelector('.dropdown__name').append(', ' + valueSecond+' '+rightFormSecond)
         }
     });
-
-    /* let dropdownSecond = document.querySelectorAll('.dropdown');
-     dropdownSecond.forEach(dropdown => {
-         let valuesElementsSecond = dropdown.querySelectorAll('.valueSecond');
-         let valueSecond = 0;
-         valuesElementsSecond.forEach(valueItem => {
-             valueSecond += (Number.parseInt(valueItem.innerText))
-         });
-         //Получаем словоформы и записываем в массив
-         let wordForms = dropdown.hasAttribute('wordformSecond') ? dropdown.getAttribute('wordformSecond').split(' '): undefined;
-         let rightForm = wordForms !== undefined ? declension(valueSecond, wordForms): '';
-         //Записываем в название dropdow значение всех
-         if(valueSecond !==0){
-             dropdown.querySelector('.dropdown__name').append(', ' + valueSecond+' '+rightForm)
-         }
-     }*/
 }
 
 

@@ -66,14 +66,29 @@
 .checkbox-element + label{
   cursor: pointer;
 }
+
 .checkbox-element:not(checked){
   position: absolute;
   opacity: 0;
 }
-.checkbox-element:not(checked) + label{
+
+.checkbox-element:not(checked) + label {
   position: relative;
   padding: 3px 0 0 30px;
 }
+
+.checkbox-element-normal:not(checked) + label {
+  font-family: Montserrat;
+  font-size: 14px;
+  color: $darkShade50;
+}
+
+.checkbox-element-bold:not(checked) + label {
+  font-family: Montserrat-Bold;
+  font-size: 14px;
+  color: #000;
+}
+
 .checkbox-element:not(checked) + label:before{
   content: '';
   position: absolute;
@@ -110,4 +125,53 @@
   transform: rotate(-135deg);
   top: 4px;
   left: 7px;
+}
+
+.checkbox-toggle-element {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 20px;
+}
+.checkbox-toggle-element + label {
+  position: relative;
+  padding: 0 0 0 60px;
+  cursor: pointer;
+}
+
+.checkbox-toggle-element-normal {
+  font-family: Montserrat;
+  font-size: 14px;
+  color: $darkShade75;
+}
+
+.checkbox-toggle-element + label:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 40px;
+  height: 20px;
+  border: 1px solid $darkShade25;
+  border-radius: 10px;
+  background: #fff;
+  transition: .2s;
+}
+.checkbox-toggle-element + label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  background: $darkShade25;
+  transition: .2s;
+}
+.checkbox-toggle-element:checked + label:before {
+  border: 1px solid #BC9CFF;
+}
+.checkbox-toggle-element:checked + label:after {
+  left: 26px;
+  background: $purple_gradient_full;
 }
