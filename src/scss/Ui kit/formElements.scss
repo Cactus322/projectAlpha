@@ -14,6 +14,7 @@
 @import "../../components/buttons/__border-gradient/buttons__border-gradient";
 @import "../../components/buttons/__only-text/buttons__only-text";
 @import "../../components/buttons/__payment/buttons__payment";
+@import "../../components/pagination/pagination";
 
 
 .form-elements {
@@ -100,6 +101,18 @@
 
 .row-2-3 {
   margin-top: 43px;
+}
+
+.row-3-3 {
+  margin-top: 40px;
+}
+
+.row-4-3 {
+  margin-top: 216px;
+}
+
+.row-5-3 {
+  margin-top: 257px;
 }
 
 .comment-grid {
