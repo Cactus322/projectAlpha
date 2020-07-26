@@ -204,7 +204,7 @@ html(lang=ru)
                 div.row-7-2
                     h3 RICH CHECKBOX BUTTONS
                     div.rich-checkbox-row
-                        div
+                        div.checkbox-first-margin
                             input#checkboxElementForLabel-1-4.checkbox-element.checkbox-element-bold(type="checkbox")
                             label(for="checkboxElementForLabel-1-4") Широкий коридор
                             p Ширина коридоров в номере не менее 91 см.
@@ -212,6 +212,17 @@ html(lang=ru)
                             input#checkboxElementForLabel-2-4.checkbox-element.checkbox-element-bold(type="checkbox")
                             label(for="checkboxElementForLabel-2-4") Помощник для инвалидов
                             p На 1 этаже вас встретит специалист  и проводит до номера.
+                div.row-8-2
+                    div.comment-wrapper
+                        img(src=require('../../images/all/comment.png').default)
+                        div
+                            h3 Мурад Сарафов
+                            p 5 дней назад
+                    div.comment-wrapper
+                        button.like__button-second.liked.page-position
+                            i.material-icons favorite
+                            span 12
+                        p Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
             section.margin_text-field-3
                 div
                     h3
@@ -244,7 +255,10 @@ html(lang=ru)
                             div.dropdown-list__item-second(name="babes") Младенцы
                 div.row-5-3
                     h3 BULLET LIST
-                    ul
-                        li Нельзя с питомцами
-                        li Без вечеринок и мероприятий
-                        li Время прибытия — после 13:00, а выезд до 12:00
+                    ul.bullet-list
+                        li
+                            p   Нельзя с питомцами
+                        li
+                            p Без вечеринок и мероприятий
+                        li
+                            p Время прибытия — после 13:00, а выезд до 12:00

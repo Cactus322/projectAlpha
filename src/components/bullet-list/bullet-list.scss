@@ -1,0 +1,22 @@
+.bullet-list li {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 12px 240px;
+  grid-gap: 10px;
+}
+
+.bullet-list li:before {
+  content: '\25CF';
+  font-size: 25px;
+  color: $darkShade25;
+}
+
+.bullet-list {
+  padding-left: 0;
+  margin-top: 16px;
+}
+
+.bullet-list p {
+  margin-top: 3px;
+}
+

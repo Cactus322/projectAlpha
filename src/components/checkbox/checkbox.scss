@@ -86,7 +86,7 @@
 .checkbox-element-bold:not(checked) + label {
   font-family: Montserrat-Bold;
   font-size: 14px;
-  color: #000;
+  color: $darkShade75;
 }
 
 .checkbox-element:not(checked) + label:before{
