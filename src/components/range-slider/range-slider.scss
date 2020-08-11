@@ -1,5 +1,5 @@
 .ui-slider-horizontal {
-  height: 6px;
+  height: 5px;
   background: #FFFFFF;
   border: 1px solid $darkShade25;
   clear: both;
@@ -24,7 +24,7 @@
 .ui-slider .ui-slider-range {
   position: absolute;
   z-index: 1;
-  height: 7px;
+  height: 6px;
   font-size: .7em;
   display: block;
   -moz-border-radius: 6px;
@@ -84,5 +84,6 @@
   font-family: Montserrat;
   outline: none;
   border: none;
-  margin-left: 67px;
+  margin-left: 65px;
+  margin-bottom: -1px;
 }

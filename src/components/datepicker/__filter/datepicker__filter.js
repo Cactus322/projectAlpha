@@ -21,3 +21,20 @@ $('div.datepicker--buttons').append('<button class="datepicker--button-apply">П
 
 myFilterDatepicker.show();
 myFilterDatepicker.hide();
+
+
+$('#filter_datepicker').mouseenter (function () {
+    $('.datepicker__filter__button-icon').addClass('hover')
+});
+
+$('#filter_datepicker').mouseleave (function () {
+    $('.datepicker__filter__button-icon').removeClass('hover')
+});
+
+$('.datepicker__filter__button-icon').mouseenter (function () {
+    $('#filter_datepicker').addClass('hover')
+});
+
+$('.datepicker__filter__button-icon').mouseleave (function () {
+    $('#filter_datepicker').removeClass('hover')
+});

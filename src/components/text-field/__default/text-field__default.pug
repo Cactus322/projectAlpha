@@ -1,0 +1,14 @@
+mixin textFieldSubscribtion
+    input.text-field__default-middle(type="Email" placeholder="Email")
+    button.text-field__button
+        i.material-icons.text-field__button-color arrow_forward
+
+mixin textFieldMasked(titleOne = 'MASKED TEXT FIELD', titleTwo = 'DEFAULT')
+    div
+        div.comment-grid
+            h3= titleOne
+            p.style_text-field= titleTwo
+        input.text-field__default(type="" placeholder="ДД.ММ.ГГГГ")
+
+mixin textFieldDefault
+    input.text-field__default(type="Email" placeholder="Email")

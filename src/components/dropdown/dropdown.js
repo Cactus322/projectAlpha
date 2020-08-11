@@ -202,3 +202,24 @@ $('input.dropdown__button-apply').click(function () {
 $('.dropdown__button-clear').click(function () {
     $('.dropdown__button-clear-hidden').trigger('click')
 });
+
+$('.dropdown i').click(function () {
+    $('div.dropdown').toggleClass('active');
+    $('div.dropdown__name').toggleClass('dropdown__name-disabled');
+});
+
+$('.dropdown__name-disabled').mouseenter (function () {
+    $('.dropdown-icon-style').addClass('hover')
+});
+
+$('.dropdown__name-disabled').mouseleave (function () {
+    $('.dropdown-icon-style').removeClass('hover')
+});
+
+$('.dropdown-icon-style').mouseenter (function () {
+    $('.dropdown__name-disabled').addClass('hover')
+});
+
+$('.dropdown-icon-style').mouseleave (function () {
+    $('.dropdown__name-disabled').removeClass('hover')
+});

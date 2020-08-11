@@ -9,10 +9,49 @@
   left: 275px;
 }
 
-.datepicker__button__svg-color {
-  fill: $darkShade50;
+.datepicker__filter__button-icon {
+  color: $darkShade50;
 
   &:hover {
-    fill: $darkShade75;
+    color: $darkShade75;
   }
+}
+
+.datepicker__filter__button-icon.hover {
+  color: $darkShade75;
+}
+
+.datepicker__filter__button-icon-start {
+  color: $darkShade50;
+
+  &:hover {
+    color: $darkShade75;
+  }
+}
+
+.datepicker__filter__button-icon-start.hover {
+  color: $darkShade75;
+}
+
+.datepicker__filter__button-icon-end {
+  color: $darkShade50;
+
+  &:hover {
+    color: $darkShade75;
+  }
+}
+
+.datepicker__filter__button-icon-end.hover {
+  color: $darkShade75;
+}
+
+.filter__datepicker__button-middle {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: none;
+  outline: none;
+  position: relative;
+  right: 48px;
+  top: 8px;
 }

@@ -16,14 +16,30 @@
   border-left: 2px solid black;
   border-top: 2px solid black;
   padding: 3px;
-  margin-left: 30px;
-  top: 15%;
+  margin-left: 48px;
+  margin-top: 2px;
   border-color: $darkShade50;
   -moz-transform: rotate(-135deg);
   -ms-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
   transform: rotate(-135deg);
+}
+
+.checkbox-list .checkbox-list-span.active:after {
+  position: absolute;
+  content: "";
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  padding: 3px;
+  margin-left: 48px;
+  margin-top: 6px;
+  border-color: $darkShade50;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .checkbox-list-span {
@@ -54,12 +70,11 @@
 }
 
 .checkbox-list-flex label {
-  margin-top: 3px;
+  margin-top: -1px;
   font-family: Montserrat;
   font-weight: normal;
   font-size: 14px;
   color: $darkShade50;
-  text-transform: capitalize;
   margin-bottom: 10px;
 }
 
@@ -75,6 +90,14 @@
 .checkbox-element:not(checked) + label {
   position: relative;
   padding: 3px 0 0 30px;
+
+  & p {
+    font-family: Montserrat;
+    font-size: 14px;
+    color: $darkShade50;
+    margin-top: -4px;
+    margin-left: 30px;
+  }
 }
 
 .checkbox-element-normal:not(checked) + label {
@@ -92,10 +115,10 @@
 .checkbox-element:not(checked) + label:before{
   content: '';
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: 4px;
   background: #FFFFFF;
   border: 1px solid $darkShade25;
@@ -106,8 +129,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 6px;
-  height: 8px;
+  width: 4px;
+  height: 6px;
 }
 
 .checkbox-element:checked + label:before{
@@ -123,7 +146,7 @@
   border-image-slice: 1;
   border-image-source: linear-gradient(45deg, #BC9CFF 0%, #8BA4F9 100%);
   transform: rotate(-135deg);
-  top: 4px;
+  top: 7px;
   left: 7px;
 }
 
@@ -135,8 +158,9 @@
 }
 .checkbox-toggle-element + label {
   position: relative;
-  padding: 0 0 0 60px;
+  padding: 0 0 0 50px;
   cursor: pointer;
+  color: $darkShade75;
 }
 
 .checkbox-toggle-element-normal {
@@ -148,10 +172,10 @@
 .checkbox-toggle-element + label:before {
   content: '';
   position: absolute;
-  top: -2px;
+  top: 0;
   left: 0;
-  width: 40px;
-  height: 20px;
+  width: 38px;
+  height: 18px;
   border: 1px solid $darkShade25;
   border-radius: 10px;
   background: #fff;
@@ -160,7 +184,7 @@
 .checkbox-toggle-element + label:after {
   content: '';
   position: absolute;
-  top: 3px;
+  top: 4px;
   left: 4px;
   width: 12px;
   height: 12px;
@@ -172,6 +196,11 @@
   border: 1px solid #BC9CFF;
 }
 .checkbox-toggle-element:checked + label:after {
-  left: 26px;
+  top: 4px;
+  left: 24px;
   background: $purple_gradient_full;
+}
+
+.rich-checkbox-bottom-text {
+  margin-top: 6px;
 }

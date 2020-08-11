@@ -1,0 +1,29 @@
+mixin buttonsFormElements
+    div.buttons-row
+        button.buttons__full-gradient CLICK ME
+        button.buttons__full-gradient.disable CLICK ME
+    div.buttons-row
+        button.buttons__border-gradient CLICK ME
+        button.buttons__border-gradient.disable CLICK ME
+    div.buttons-row-2
+        a.buttons__only-text CLICK ME
+        a.buttons__only-text.disable CLICK ME
+    button.buttons__payment ПЕРЕЙТИ К ОПЛАТЕ
+
+mixin buttonFullGradient(title='CLICK ME')
+    button.buttons__full-gradient= title
+
+mixin buttonFullGradientDisabled(title='CLICK ME')
+    button.buttons__full-gradient.disable= title
+
+mixin buttonBorderGradient(title='CLICK ME')
+    button.buttons__border-gradient= title
+
+mixin buttonOnlyText(title='CLICK ME')
+    a.buttons__only-text= title
+
+mixin buttonOnlyTextDisable(title='CLICK ME')
+    a.buttons__only-text.disable= title
+
+mixin buttonPayment
+    button.buttons__payment ПЕРЕЙТИ К ОПЛАТЕ

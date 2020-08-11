@@ -1,0 +1,9 @@
+mixin buttonLike(value)
+    button.like__button
+        i.material-icons favorite_border
+        span= value
+
+mixin buttonLikeActive(value)
+    button.like__button-second.liked
+        i.material-icons favorite
+        span= value

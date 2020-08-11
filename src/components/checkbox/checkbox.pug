@@ -1,0 +1,86 @@
+//RICH CHECKBOX BUTTONS
+mixin checkboxRich
+    div.rich-checkbox-row
+        div.checkbox-first-margin
+            input#checkboxElementForLabel-1-4.checkbox-element.checkbox-element-bold(type="checkbox")
+            label(for="checkboxElementForLabel-1-4") Широкий коридор
+            p.rich-checkbox-bottom-text
+                | Ширина коридоров в номере
+                br
+                | не менее 91 см.
+        div
+            input#checkboxElementForLabel-2-4.checkbox-element.checkbox-element-bold(type="checkbox")
+            label(for="checkboxElementForLabel-2-4") Помощник для инвалидов
+            p.rich-checkbox-bottom-text На 1 этаже вас встретит специалист  и проводит до номера.
+
+//TOGGLE CHECKBOX
+mixin checkboxToggleChecked
+    div
+        input#checkboxToggleElementForLabel-1.checkbox-toggle-element.checkbox-toggle-element-normal(type="checkbox" checked)
+        label(for="checkboxToggleElementForLabel-1") Получать спецпредложения
+
+mixin checkboxToggle
+    div
+        input#checkboxToggleElementForLabel-2.checkbox-toggle-element.checkbox-toggle-element-normal(type="checkbox")
+        label(for="checkboxToggleElementForLabel-2") Получать спецпредложения
+
+//CHECKBOX BUTTONS
+mixin checkboxButtons
+    div
+        input#checkboxElementForLabel-1-3.checkbox-element.checkbox-element-normal(type="checkbox")
+        label(for="checkboxElementForLabel-1-3") Можно курить
+    div
+        input#checkboxElementForLabel-2-3.checkbox-element.checkbox-element-normal(type="checkbox" checked)
+        label(for="checkboxElementForLabel-2-3") Можно с питомцами
+    div
+        input#checkboxElementForLabel-3-3.checkbox-element.checkbox-element-normal(type="checkbox" checked)
+        label(for="checkboxElementForLabel-3-3")
+            | Можно пригласить гостей
+            p (до 10 человек)
+
+//EXPANDABLE CHECKBOX LIST
+mixin checkboxList
+    div.checkbox-list
+        span.checkbox-list-span EXPANDABLE CHECKBOX LIST
+        ul.checkbox-list-items
+            li.checkbox-list-flex
+                input#checkboxElementForLabel-1.checkbox-element(type="checkbox")
+                label(for="checkboxElementForLabel-1") Завтрак
+            li.checkbox-list-flex
+                input#checkboxElementForLabel-2.checkbox-element(type="checkbox")
+                label(for="checkboxElementForLabel-2") Письменный стол
+            li.checkbox-list-flex
+                input#checkboxElementForLabel-3.checkbox-element(type="checkbox")
+                label(for="checkboxElementForLabel-3") Стул для кормления
+            li.checkbox-list-flex
+                input#checkboxElementForLabel-4.checkbox-element(type="checkbox")
+                label(for="checkboxElementForLabel-4") Кроватка
+            li.checkbox-list-flex
+                input#checkboxElementForLabel-5.checkbox-element(type="checkbox")
+                label(for="checkboxElementForLabel-5") Телевизор
+            li.checkbox-list-flex
+                input#checkboxElementForLabel-6.checkbox-element(type="checkbox")
+                label(for="checkboxElementForLabel-6") Шампунь
+
+mixin checkboxListActive
+    div.checkbox-list
+        span.checkbox-list-span.active EXPANDABLE CHECKBOX LIST
+        ul.checkbox-list-items.active
+            li.checkbox-list-flex
+                input#checkboxElementForLabel-1-2.checkbox-element(type="checkbox")
+                label(for="checkboxElementForLabel-1-2") Завтрак
+            li.checkbox-list-flex
+                input#checkboxElementForLabel-2-2.checkbox-element(type="checkbox" checked)
+                label(for="checkboxElementForLabel-2-2") Письменный стол
+            li.checkbox-list-flex
+                input#checkboxElementForLabel-3-2.checkbox-element(type="checkbox" checked)
+                label(for="checkboxElementForLabel-3-2") Стул для кормления
+            li.checkbox-list-flex
+                input#checkboxElementForLabel-4-2.checkbox-element(type="checkbox" checked)
+                label(for="checkboxElementForLabel-4-2") Кроватка
+            li.checkbox-list-flex
+                input#checkboxElementForLabel-5-2.checkbox-element(type="checkbox")
+                label(for="checkboxElementForLabel-5-2") Телевизор
+            li.checkbox-list-flex
+                input#checkboxElementForLabel-6-2.checkbox-element(type="checkbox")
+                label(for="checkboxElementForLabel-6-2") Шампунь

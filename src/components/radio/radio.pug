@@ -1,0 +1,10 @@
+mixin radioButtonActive(title)
+    div
+        input#radioButtonForLabel-1.radio-element(type="radio" value="1" name="radio" readonly="readonly" checked)
+        label(for="radioButtonForLabel-1")= title
+
+mixin radioButton(title)
+    div
+        input#radioButtonForLabel-2.radio-element(type="radio" value="2" name="radio")
+        label(for="radioButtonForLabel-2")= title
+

@@ -6,4 +6,38 @@
   box-sizing: border-box;
   border-radius: 4px;
   text-indent: 15px;
+
+  &:hover {
+    border: 1px solid $darkShade50;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.text-field__hover_mini.hover {
+  border: 1px solid $darkShade50;
+}
+
+.text-field__hover_middle {
+  width: 266px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid $darkShade25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-indent: 15px;
+
+  &:hover {
+    border: 1px solid $darkShade50;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.text-field__hover_middle.hover {
+  border: 1px solid $darkShade50;
 }

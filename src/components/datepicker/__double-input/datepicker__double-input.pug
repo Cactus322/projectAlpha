@@ -1,0 +1,12 @@
+mixin datepickerDoubleInput(titleOne = 'DATE DROPDOWN', titleTwo = 'DATE DROPDOWN')
+    div.datepicker-grid
+        div
+            h3= titleOne
+            input#start_datepicker.text-field__hover_mini.placeholder-uppercase(type="text" placeholder="ДД.ММ.ГГГГ" data-range="true" data-multiple-dates-separator=" - ")
+            button#start_datepicker_button.start__datepicker__button
+                i.material-icons.datepicker__filter__button-icon-start expand_more
+        div
+            h3= titleTwo
+            input#end_datepicker.text-field__hover_mini.placeholder-uppercase(type="text" placeholder="ДД.ММ.ГГГГ")
+            button#end_datepicker_button.end__datepicker__button
+                i.material-icons.datepicker__filter__button-icon-end expand_more

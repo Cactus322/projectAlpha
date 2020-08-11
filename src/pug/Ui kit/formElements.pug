@@ -6,131 +6,57 @@ html(lang=ru)
         title="Form Elements"
     body.form-elements
         div
-            img.form_logo-gray(src=require('../../images/all/LogoGray.svg').default width="44px" alt="Логотип")
+            img.form_logo-gray(src=require('../../images/all/LogoGray.svg').default alt="Логотип")
         div
 
         div.form_grid
             //text fields
             section.margin_text-field
                 div
+                    include ../../components/text-field/__default/text-field__default
                     div.comment-grid
-                        p TEXT FIELD
+                        h3 TEXT FIELD
                         p.style_text-field DEFAULT
-                    input.text-field__default(type="Email" placeholder="Email")
+                    +textFieldDefault
                 div.row-2
                     div.comment-grid
-                        p TEXT FIELD
-                        p.row-2_style_text-field HOVER/FOCUS
-                    input.text-field__hover(type="Email" placeholder="This is pretty awesome")
+                        h3 TEXT FIELD
+                        p.row-2_style_text-field HOVER / FOCUS
+                    include ../../components/text-field/__hover/text-field__hover
+                    +textFieldHover
                 div.row-3
                     div.comment-grid
-                        p DROPDOWN
+                        h3 DROPDOWN
                         p.row-3_style_dropdown DEFAULT
-                    div.dropdown.absolute(wordformSecond="Младенец Младенца Младенцев" wordforms="Гость Гостя Гостей" default="Сколько гостей?")
-                        div.dropdown__name.dropdown__name-disabled Сколько гостей?
-                        div.dropdown-list
-                            div.dropdown-list__item(name="adult") Взрослые
-                            div.dropdown-list__item(name="child") Дети
-                            div.dropdown-list__item-second(name="babes") Младенцы
+                    include ../../components/dropdown/dropdown
+                    +dropdown
                 div.row-4
-                    div
-                        div.comment-grid
-                            p MASKED TEXT FIELD
-                            p.style_text-field DEFAULT
-                        input.text-field__default(type="" placeholder="ДД.ММ.ГГГГ")
-                div.row-5.datepicker-grid
-                    div
-                        p DATE DROPDOWN
-                        input#start_datepicker.text-field__hover_mini.placeholder-uppercase(type="text" placeholder="ДД.ММ.ГГГГ" data-range="true" data-multiple-dates-separator=" - ")
-                        button#start_datepicker_button.start__datepicker__button
-                            svg(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg")
-                                path.datepicker__button__svg-color(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z")
-                    div
-                        p DATE DROPDOWN
-                        input#end_datepicker.text-field__hover_mini.placeholder-uppercase(type="text" placeholder="ДД.ММ.ГГГГ")
-                        button#end_datepicker_button.end__datepicker__button
-                            svg(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg")
-                                path.datepicker__button__svg-color(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z")
+                    +textFieldMasked
+                div.row-5
+                    include ../../components/datepicker/__double-input/datepicker__double-input
+                    +datepickerDoubleInput
                 div.row-6
-                    p.text-bold FILTER DATE DROPDOWN
-                    input#filter_datepicker.text-field__hover.placeholder-uppercase(type="text" placeholder="ДД.ММ.ГГГГ" data-range="true" data-multiple-dates-separator=" - ")
-                    button#filter_datepicker_button.filter__datepicker__button
-                        svg.datepicker__button__svg-color(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg")
-                            path(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z")
+                    h3 FILTER DATE DROPDOWN
+                    include ../../components/datepicker/__filter/datepicker__filter
+                    +datepickerFilter
                 div.row-7
-                    p.text-bold SUBSCRIPTION TEXT FIELD
-                    input.text-field__default(type="Email" placeholder="Email")
-                    button.text-field__button
-                        svg.text-field__button-color(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
-                            path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z")
-                            defs
-                                linearGradient#myGradient(x1="0" x2="0" y1="0" y2="1")
-                                    stop(offset="0%"  stop-color="#BC9CFF")
-                                    stop(offset="100%" stop-color="#8BA4F9")
+                    h3 SUBSCRIPTION TEXT FIELD
+                    +textFieldSubscribtion
                 div.row-8
                     div.comment-grid
-                        p DROPDOWN
-                        p.row-3_style_dropdown DEFAULT
-                    div.dropdown.absolute(wordformSecond="Младенец Младенца Младенцев" wordforms="Гость Гостя Гостей" default="Сколько гостей?")
-                        div.dropdown__name.dropdown__name-disabled Сколько гостей?
-                        div.dropdown-list
-                            div.dropdown-list__item(name="adult") Взрослые
-                            div.dropdown-list__item(name="child") Дети
-                            div.dropdown-list__item-second(name="babes") Младенцы
+                        h3 DROPDOWN
+                        p.row-3_style_dropdown.middle DEFAULT
+                    +dropdownMiddle
                 div.row-9
                     div.comment-grid
-                        p DROPDOWN
-                        p.row-3_style_dropdown DEFAULT
-                    div.dropdown.absolute.active(wordformSecond="Младенец Младенца Младенцев" wordforms="Гость Гостя Гостей" default="Сколько гостей?")
-                        div.dropdown__name Сколько гостей?
-                        div.dropdown-list
-                            div.dropdown-list__item(name="adult") Взрослые
-                            div.dropdown-list__item(name="child") Дети
-                            div.dropdown-list__item-second(name="babes") Младенцы
+                        h3 DROPDOWN
+                        p.row-3_style_dropdown.expanded EXPANDED
+                    +dropdownMiddleActive
                 div.row-10
-                    div.checkbox-list
-                        span.checkbox-list-span EXPANDABLE CHECKBOX LIST
-                        ul.checkbox-list-items
-                            li.checkbox-list-flex
-                                input#checkboxElementForLabel-1.checkbox-element(type="checkbox")
-                                label(for="checkboxElementForLabel-1") Завтрак
-                            li.checkbox-list-flex
-                                input#checkboxElementForLabel-2.checkbox-element(type="checkbox")
-                                label(for="checkboxElementForLabel-2") Письменный стол
-                            li.checkbox-list-flex
-                                input#checkboxElementForLabel-3.checkbox-element(type="checkbox")
-                                label(for="checkboxElementForLabel-3") Стул для кормления
-                            li.checkbox-list-flex
-                                input#checkboxElementForLabel-4.checkbox-element(type="checkbox")
-                                label(for="checkboxElementForLabel-4") Кроватка
-                            li.checkbox-list-flex
-                                input#checkboxElementForLabel-5.checkbox-element(type="checkbox")
-                                label(for="checkboxElementForLabel-5") Телевизор
-                            li.checkbox-list-flex
-                                input#checkboxElementForLabel-6.checkbox-element(type="checkbox")
-                                label(for="checkboxElementForLabel-6") Шампунь
+                    include ../../components/checkbox/checkbox
+                    +checkboxList
                 div.row-11
-                    div.checkbox-list
-                        span.checkbox-list-span EXPANDABLE CHECKBOX LIST
-                        ul.checkbox-list-items.active
-                            li.checkbox-list-flex
-                                input#checkboxElementForLabel-1-2.checkbox-element(type="checkbox")
-                                label(for="checkboxElementForLabel-1-2") Завтрак
-                            li.checkbox-list-flex
-                                input#checkboxElementForLabel-2-2.checkbox-element(type="checkbox")
-                                label(for="checkboxElementForLabel-2-2") Письменный стол
-                            li.checkbox-list-flex
-                                input#checkboxElementForLabel-3-2.checkbox-element(type="checkbox")
-                                label(for="checkboxElementForLabel-3-2") Стул для кормления
-                            li.checkbox-list-flex
-                                input#checkboxElementForLabel-4-2.checkbox-element(type="checkbox")
-                                label(for="checkboxElementForLabel-4-2") Кроватка
-                            li.checkbox-list-flex
-                                input#checkboxElementForLabel-5-2.checkbox-element(type="checkbox")
-                                label(for="checkboxElementForLabel-5-2") Телевизор
-                            li.checkbox-list-flex
-                                input#checkboxElementForLabel-6-2.checkbox-element(type="checkbox")
-                                label(for="checkboxElementForLabel-6-2") Шампунь
+                    +checkboxListActive
                 div.row-12
                     div.flex-group
                         div
@@ -148,117 +74,55 @@ html(lang=ru)
                 div
                     h3 CHECKBOX BUTTONS
                     div.checkbox-column
-                        input#checkboxElementForLabel-1-3.checkbox-element.checkbox-element-normal(type="checkbox")
-                        label(for="checkboxElementForLabel-1-3") Можно курить
-                        input#checkboxElementForLabel-2-3.checkbox-element.checkbox-element-normal(type="checkbox")
-                        label(for="checkboxElementForLabel-2-3") Можно с питомцами
-                        input#checkboxElementForLabel-3-3.checkbox-element.checkbox-element-normal(type="checkbox")
-                        label(for="checkboxElementForLabel-3-3") Можно пригласить гостей (до 10 человек)
+                        +checkboxButtons
                 div.row-2-2
                     h3 RADIO BUTTONS
                     div.radio-buttons-row
-                        input#radioButtonForLabel-1.radio-element(type="radio" value="1" name="radio" readonly="readonly")
-                        label(for="radioButtonForLabel-1") Мужчина
-                        input#radioButtonForLabel-2.radio-element(type="radio" value="2" name="radio")
-                        label(for="radioButtonForLabel-2") Женщина
+                        include ../../components/radio/radio
+                        +radioButtonActive('Мужчина')
+                        +radioButton('Женщина')
                 div.row-3-2
                     h3 TOGGLE
                     div.checkbox-toggle-row
-                        input#checkboxToggleElementForLabel-1.checkbox-toggle-element.checkbox-toggle-element-normal(type="checkbox" checked)
-                        label(for="checkboxToggleElementForLabel-1") Получать спецпредложения
-                        input#checkboxToggleElementForLabel-2.checkbox-toggle-element.checkbox-toggle-element-normal(type="checkbox")
-                        label(for="checkboxToggleElementForLabel-2") Получать спецпредложения
+                        +checkboxToggleChecked
+                        +checkboxToggle
                 div.row-4-2
                     h3 LIKE BUTTON
                     div.like__button-column
-                        button.like__button
-                            i.material-icons favorite_border
-                            span 2
-                        button.like__button-second.liked
-                            i.material-icons favorite
-                            span 12
+                        include ../../components/buttons/__like/buttons__like
+                        +buttonLike('2')
+                        +buttonLikeActive('12')
                 div.row-5-2
                     h3 RATE BUTTON
                     div.rating-area-grid
-                        div.rating-area
-                            i.material-icons(value="1") star
-                            i.material-icons(value="2") star
-                            i.material-icons(value="3") star
-                            i.material-icons.active(value="4") star
-                            i.material-icons(value="5") star_border
-                        div.rating-area
-                            i.material-icons(value="1") star
-                            i.material-icons(value="2") star
-                            i.material-icons(value="3") star
-                            i.material-icons(value="4") star
-                            i.material-icons.active(value="5") star
+                        include ../../components/buttons/__rate/buttons__rate
+                        +buttonRate4
+                        +buttonRate5
                 div.row-6-2
                     div.comment-grid
                         h3 DROPDOWN
-                    div.dropdown.absolute.active(wordformSecond="Младенец Младенца Младенцев" wordforms="Гость Гостя Гостей" default="Сколько гостей?")
-                        div.dropdown__name.dropdown__name-disabled Сколько гостей?
-                        div.dropdown-list
-                            div.dropdown-list__item(name="adult") Взрослые
-                            div.dropdown-list__item(name="child") Дети
-                            div.dropdown-list__item-second(name="babes") Младенцы
+                    +dropdownActive
                 div.row-7-2
                     h3 RICH CHECKBOX BUTTONS
-                    div.rich-checkbox-row
-                        div.checkbox-first-margin
-                            input#checkboxElementForLabel-1-4.checkbox-element.checkbox-element-bold(type="checkbox")
-                            label(for="checkboxElementForLabel-1-4") Широкий коридор
-                            p Ширина коридоров в номере не менее 91 см.
-                        div
-                            input#checkboxElementForLabel-2-4.checkbox-element.checkbox-element-bold(type="checkbox")
-                            label(for="checkboxElementForLabel-2-4") Помощник для инвалидов
-                            p На 1 этаже вас встретит специалист  и проводит до номера.
+                    +checkboxRich
                 div.row-8-2
-                    div.comment-wrapper
-                        img(src=require('../../images/all/comment.png').default)
-                        div
-                            h3 Мурад Сарафов
-                            p 5 дней назад
-                    div.comment-wrapper
-                        button.like__button-second.liked.page-position
-                            i.material-icons favorite
-                            span 12
-                        p Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+                    include ../../components/comment/comment
+                    +comment
             section.margin_text-field-3
-                div
-                    h3
-                        label RANGE SLIDER
-                        input#amount(type="text" readonly)
-                    div#range-slider
+                include ../../components/range-slider/range-slider
+                +rangeSlider
                 div.row-2-3
                     h3 BUTTONS
-                    div.buttons-row
-                        button.buttons__full-gradient CLICK ME
-                        button.buttons__full-gradient.disable CLICK ME
-                    div.buttons-row
-                        button.buttons__border-gradient CLICK ME
-                        button.buttons__border-gradient.disable CLICK ME
-                    div.buttons-row-2
-                        a.buttons__only-text CLICK ME
-                        a.buttons__only-text.disable CLICK ME
-                    button.buttons__payment ПЕРЕЙТИ К ОПЛАТЕ
+                    include ../../components/buttons/buttons
+                    +buttonsFormElements
                 div.row-3-3
                     h3 PAGINATION
-                    div#paginationFrontend
-                    p 1-12 из 100+ вариантов аренды
+                    include ../../components/pagination/pagination
+                    +pagination
                 div.row-4-3
                     h3 DROPDOWN
-                    div.dropdown.absolute.active(wordformSecond="Младенец Младенца Младенцев" wordforms="Гость Гостя Гостей" default="Сколько гостей?")
-                        div.dropdown__name.dropdown__name-disabled Сколько гостей?
-                        div.dropdown-list
-                            div.dropdown-list__item(name="adult") Взрослые
-                            div.dropdown-list__item(name="child") Дети
-                            div.dropdown-list__item-second(name="babes") Младенцы
+                    // Исправить dropdown.js (убрать "очистить", когда счетчики на нулях, и, для этой версии, добавить значения счетчикам)
+                    +dropdownActive
                 div.row-5-3
                     h3 BULLET LIST
-                    ul.bullet-list
-                        li
-                            p   Нельзя с питомцами
-                        li
-                            p Без вечеринок и мероприятий
-                        li
-                            p Время прибытия — после 13:00, а выезд до 12:00
+                    include ../../components/bullet-list/bullet-list

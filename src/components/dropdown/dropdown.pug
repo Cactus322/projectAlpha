@@ -1,0 +1,35 @@
+mixin dropdownActive
+    div.dropdown.absolute.active(wordformSecond="Младенец Младенца Младенцев" wordforms="Гость Гостя Гостей" default="Сколько гостей?")
+        div.dropdown__name.dropdown__name-disabled Сколько гостей?
+        i.material-icons.dropdown-icon-style expand_more
+        div.dropdown-list
+            div.dropdown-list__item(name="adult") Взрослые
+            div.dropdown-list__item(name="child") Дети
+            div.dropdown-list__item-second(name="babes") Младенцы
+
+mixin dropdown
+    div.dropdown.absolute(wordformSecond="Младенец Младенца Младенцев" wordforms="Гость Гостя Гостей" default="Сколько гостей?")
+        div.dropdown__name.dropdown__name-disabled Сколько гостей?
+        i.material-icons.dropdown-icon-style expand_more
+        div.dropdown-list
+            div.dropdown-list__item(name="adult") Взрослые
+            div.dropdown-list__item(name="child") Дети
+            div.dropdown-list__item-second(name="babes") Младенцы
+
+mixin dropdownMiddle
+    div.dropdown.absolute.dropdown-middle(wordformSecond="Младенец Младенца Младенцев" wordforms="Гость Гостя Гостей" default="Сколько гостей?")
+        div.dropdown__name.dropdown__name-disabled Сколько гостей?
+        i.material-icons.dropdown-icon-style.middle expand_more
+        div.dropdown-list
+            div.dropdown-list__item(name="adult") Взрослые
+            div.dropdown-list__item(name="child") Дети
+            div.dropdown-list__item-second(name="babes") Младенцы
+
+mixin dropdownMiddleActive
+    div.dropdown.absolute.dropdown-middle.active(wordformSecond="Младенец Младенца Младенцев" wordforms="Гость Гостя Гостей" default="Сколько гостей?")
+        div.dropdown__name.dropdown__name-disabled Сколько гостей?
+        i.material-icons.dropdown-icon-style.middle expand_more
+        div.dropdown-list
+            div.dropdown-list__item(name="adult") Взрослые
+            div.dropdown-list__item(name="child") Дети
+            div.dropdown-list__item-second(name="babes") Младенцы
