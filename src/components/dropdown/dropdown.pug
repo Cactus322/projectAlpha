@@ -1,5 +1,5 @@
 mixin dropdownActive
-    div.dropdown.absolute.active(wordformSecond="Младенец Младенца Младенцев" wordforms="Гость Гостя Гостей" default="Сколько гостей?")
+    div.dropdown.absolute.active(wordformsSecond="младенец младенца младенцев" wordforms="гость гостя гостей" default="Сколько гостей?")
         div.dropdown__name.dropdown__name-disabled Сколько гостей?
         i.material-icons.dropdown-icon-style expand_more
         div.dropdown-list
@@ -8,7 +8,7 @@ mixin dropdownActive
             div.dropdown-list__item-second(name="babes") Младенцы
 
 mixin dropdown
-    div.dropdown.absolute(wordformSecond="Младенец Младенца Младенцев" wordforms="Гость Гостя Гостей" default="Сколько гостей?")
+    div.dropdown.absolute(wordformsSecond="младенец младенца младенцев" wordforms="гость гостя гостей" default="Сколько гостей?")
         div.dropdown__name.dropdown__name-disabled Сколько гостей?
         i.material-icons.dropdown-icon-style expand_more
         div.dropdown-list
@@ -17,19 +17,19 @@ mixin dropdown
             div.dropdown-list__item-second(name="babes") Младенцы
 
 mixin dropdownMiddle
-    div.dropdown.absolute.dropdown-middle(wordformSecond="Младенец Младенца Младенцев" wordforms="Гость Гостя Гостей" default="Сколько гостей?")
+    div.dropdown.absolute.dropdown-middle(wordformsSecond="кровать кровати кроватей" wordforms="спальня спальни спален" wordformsThird="ванная ванные ванных" default="Удобства номера")
         div.dropdown__name.dropdown__name-disabled Сколько гостей?
         i.material-icons.dropdown-icon-style.middle expand_more
-        div.dropdown-list
-            div.dropdown-list__item(name="adult") Взрослые
-            div.dropdown-list__item(name="child") Дети
-            div.dropdown-list__item-second(name="babes") Младенцы
+        div.dropdown-list.room
+            div.dropdown-list__item(name="adult") Спальни
+            div.dropdown-list__item-second(name="child") Кровати
+            div.dropdown-list__item-third(name="babes") Ванные
 
 mixin dropdownMiddleActive
-    div.dropdown.absolute.dropdown-middle.active(wordformSecond="Младенец Младенца Младенцев" wordforms="Гость Гостя Гостей" default="Сколько гостей?")
+    div.dropdown.absolute.dropdown-middle.active(wordformsThird="ванная ванные ванных" wordformsSecond="кровать кровати кроватей" wordforms="спальня спальни спален" default="Удобства номера")
         div.dropdown__name.dropdown__name-disabled Сколько гостей?
         i.material-icons.dropdown-icon-style.middle expand_more
-        div.dropdown-list
-            div.dropdown-list__item(name="adult") Взрослые
-            div.dropdown-list__item(name="child") Дети
-            div.dropdown-list__item-second(name="babes") Младенцы
+        div.dropdown-list.room
+            div.dropdown-list__item(name="adult") Спальни
+            div.dropdown-list__item-second(name="child") Кровати
+            div.dropdown-list__item-third(name="babes") Ванные комнаты
