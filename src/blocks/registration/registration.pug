@@ -1,0 +1,30 @@
+mixin registration
+    include ../../components/text-field/__default/text-field__default
+    include ../../components/radio/radio
+    include ../../components/datepicker/__solo/datepicker__solo
+    include ../../components/checkbox/checkbox
+    include ../../components/buttons/buttons
+    include ../../components/datepicker/__filter/datepicker__filter
+    include ../../components/pagination/pagination
+    div.registration
+        h1 Регистрация аккаунта
+        div.registration-name
+            +textFieldDefault('Имя')
+            +textFieldDefault('Фамилия')
+        div.registration-radio
+            +radioButtonBlock
+        div.registration-datepicker
+           +datepickerFilterSolo('ДАТА РОЖДЕНИЯ')
+        div.registration-sign-in
+            h3 ДАННЫЕ ДЛЯ ВХОДА В СЕРВИС
+            div.registration-email
+                +textFieldDefault
+                +textFieldDefault('Пароль')
+        div.registration-checkbox
+            +checkboxToggle
+        div.registration-button-biggest
+            +buttonBiggest
+        div.registration-button-border
+            p Уже есть аккаунт на Toxin
+            div
+                +buttonBorderGradientSignIn('ВОЙТИ')

@@ -8,7 +8,9 @@ mixin buttonsFormElements
     div.buttons-row-2
         a.buttons__only-text CLICK ME
         a.buttons__only-text.disable CLICK ME
-    button.buttons__payment ПЕРЕЙТИ К ОПЛАТЕ
+    button.buttons__biggest
+        h3 ПЕРЕЙТИ К ОПЛАТЕ
+        i.material-icons arrow_forward
 
 mixin buttonFullGradient(title='CLICK ME')
     button.buttons__full-gradient= title
@@ -16,8 +18,11 @@ mixin buttonFullGradient(title='CLICK ME')
 mixin buttonFullGradientDisabled(title='CLICK ME')
     button.buttons__full-gradient.disable= title
 
-mixin buttonBorderGradient(title='CLICK ME')
-    button.buttons__border-gradient= title
+mixin buttonBorderGradientSignIn(titleOne='CLICK ME')
+    button.buttons__border-gradient.button-sign-in= titleOne
+
+mixin buttonBorderGradientCreate(titleOne='CLICK ME')
+    button.buttons__border-gradient.button-create= titleOne
 
 mixin buttonOnlyText(title='CLICK ME')
     a.buttons__only-text= title
@@ -25,5 +30,7 @@ mixin buttonOnlyText(title='CLICK ME')
 mixin buttonOnlyTextDisable(title='CLICK ME')
     a.buttons__only-text.disable= title
 
-mixin buttonPayment
-    button.buttons__payment ПЕРЕЙТИ К ОПЛАТЕ
+mixin buttonBiggest(titleOne = 'ПЕРЕЙТИ К ОПЛАТЕ')
+    button.buttons__biggest
+        h3= titleOne
+        i.material-icons arrow_forward

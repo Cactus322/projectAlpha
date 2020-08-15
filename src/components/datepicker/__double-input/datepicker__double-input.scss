@@ -5,6 +5,18 @@
 @import "../air-datepicker-custom/timepicker";
 @import "./__button/datepicker__double-input__button";
 
+.datepicker-grid {
+  display: grid;
+  grid-template-columns: 49%  50%;
+  height: 100px;
+
+  & h3 {
+    margin-bottom: 5px;
+    font-family: Montserrat-Bold;
+    text-transform: uppercase;
+  }
+}
+
 .datepicker__double-input {
   width: 150px;
   height: 44px;

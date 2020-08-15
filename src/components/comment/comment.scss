@@ -24,3 +24,9 @@
 .comment-bottom-text {
   padding-top: 3px;
 }
+
+@media (max-width: 1290px) {
+  .comment-wrapper {
+    grid-template-columns: 66px 300px;
+  }
+}

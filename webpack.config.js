@@ -88,9 +88,14 @@ module.exports = {
             filename: './style/headers&footers.css'
         }),*/
 
-        new MiniCssExtractPlugin({
+        /*new MiniCssExtractPlugin({
             template: './src/scss/Ui kit/formElements.scss',
             filename: './style/formElements.css'
+        }),*/
+
+        new MiniCssExtractPlugin({
+            template: './src/scss/Ui kit/cards.scss',
+            filename: './style/cards.css'
         }),
 
         /*new HtmlWebpackPlugin({
@@ -103,8 +108,12 @@ module.exports = {
             filename: 'index.html'
         }),*/
 
-        new HtmlWebpackPlugin({
+        /*new HtmlWebpackPlugin({
             template: './src/pug/Ui kit/formElements.pug',
+            filename: 'index.html'
+        }),*/
+       new HtmlWebpackPlugin({
+            template: './src/pug/Ui kit/cards.pug',
             filename: 'index.html'
         }),
         /*new HtmlWebpackPlugin({

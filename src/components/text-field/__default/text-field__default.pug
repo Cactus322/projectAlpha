@@ -10,5 +10,5 @@ mixin textFieldMasked(titleOne = 'MASKED TEXT FIELD', titleTwo = 'DEFAULT')
             p.style_text-field= titleTwo
         input.text-field__default(type="" placeholder="ДД.ММ.ГГГГ")
 
-mixin textFieldDefault
-    input.text-field__default(type="Email" placeholder="Email")
+mixin textFieldDefault(titleOne = 'Email')
+    input.text-field__default(type="Email" placeholder=titleOne)

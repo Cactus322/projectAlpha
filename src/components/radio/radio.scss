@@ -41,3 +41,19 @@
   top: 7px;
   left: 4px;
 }
+
+.radio-buttons-row {
+  display: flex;
+  font-family: Montserrat;
+  font-size: 14px;
+  color: $darkShade50;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  & div {
+    margin-right: 20px;
+  }
+}

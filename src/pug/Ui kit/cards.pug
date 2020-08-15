@@ -1,0 +1,25 @@
+doctype html
+html(lang=ru)
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title="Cards"
+    body
+        div
+            include ../../components/logo/logo
+            +logo
+        div.cards
+            section.cards-column-1
+                div.cards-row-1-1
+                    include ../../blocks/search-number/seacrh-number
+                    +searchNumber
+                div.cards-row-2-1
+                    include ../../blocks/registration/registration
+                    +registration
+            section.cards-column-2
+                div.cards-row-1-2
+                    include ../../blocks/booking/booking
+                    +booking
+                div.cards-row-2-2
+                    include ../../blocks/sign-in/sign-in
+                    +signIn

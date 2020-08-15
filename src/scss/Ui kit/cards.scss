@@ -1,0 +1,64 @@
+//Components
+@import "../fonts/fonts";
+@import "../../components/colors/colors";
+@import "../../components/logo/logo";
+@import "../../components/text-field/__default/text-field__default";
+@import "../../components/text-field/__hover/text-field__hover";
+@import "../../components/text-field/__button/text-field__button";
+@import "../../components/dropdown/dropdown";
+@import "../../components/datepicker/__double-input/datepicker__double-input";
+@import "../../components/datepicker/__filter/datepicker__filter";
+@import "../../components/checkbox/checkbox";
+@import "../../components/radio/radio";
+@import "../../components/buttons/__rate/buttons__rate";
+@import "../../components/buttons/__like/buttons__like";
+@import "../../components/range-slider/range-slider";
+@import "../../components/buttons/__full-gradient/buttons__full-gradient";
+@import "../../components/buttons/__border-gradient/buttons__border-gradient";
+@import "../../components/buttons/__only-text/buttons__only-text";
+@import "../../components/buttons/__payment/buttons__biggest";
+@import "../../components/pagination/pagination";
+@import "../../components/bullet-list/bullet-list";
+@import "../../components/dropdown/dropdown";
+@import "../../components/comment/comment";
+
+//Blocks
+@import "../../blocks/search-number/search-number";
+@import "../../blocks/registration/registration";
+@import "../../blocks/booking/booking";
+@import "../../blocks/sign-in/sign-in";
+
+body {
+  background: #F4F4F6, -10;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.cards-column-1 {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.cards-column-2 {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.cards-row-1-1 {
+  margin-left: 132px;
+  margin-top: 16px;
+}
+
+.cards-row-2-1 {
+  margin-left: 132px;
+  margin-top: 40px;
+}
+
+.cards-row-1-2 {
+  margin-top: 16px;
+  margin-left: 82px;
+}
+

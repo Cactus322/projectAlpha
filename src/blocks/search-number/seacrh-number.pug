@@ -1,0 +1,16 @@
+mixin searchNumber
+    include ../../components/datepicker/__double-input/datepicker__double-input
+    include ../../components/dropdown/dropdown
+    include ../../components/buttons/buttons
+    div.number
+        h1
+            | Найдём номера под
+            br
+            | ваши пожелания
+        div.number-datepicker__double-input
+            +datepickerDoubleInput('Прибытие', 'Выезд')
+        div.number-dropdown
+            h3 ГОСТИ
+            +dropdown
+        div.number-button-biggest
+            +buttonBiggest('ПОДОБРАТЬ НОМЕР')

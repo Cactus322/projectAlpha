@@ -1,0 +1,38 @@
+mixin booking
+    include ../../components/datepicker/__double-input/datepicker__double-input
+    include ../../components/dropdown/dropdown
+    include ../../components/buttons/buttons
+    div.booking
+        div.booking-number
+            p.booking-number-hotel-number
+                | №
+                big 888
+            h3.booking-number-quality ЛЮКС
+            p.booking-number-price.bold 9 990₽
+            p.booking-number-price.normal в сутки
+        div.booking-datepicker
+            +datepickerDoubleInput('Прибытие', 'Выезд')
+        div.booking-dropdown
+            h3 ГОСТИ
+            +dropdown
+        div
+            div.booking-service-1
+                p 9 990₽ х 4 суток
+                p 39 960₽
+            div.booking-service-2
+                p Сбор за услуги: скидка 2 179₽
+                img(src=require('../../images/all/information_outline.png').default)
+                p 0₽
+            div.booking-service-3
+                p
+                    | Сбор за дополнительные
+                    br
+                    | услуги
+                img(src=require('../../images/all/information_outline.png').default)
+                p 300₽
+        div.booking-total-price
+            h2 Итого
+            img(src=require('../../images/all/rectangle.png').default)
+            h2 38 081₽
+        div.booking-button
+            +buttonBiggest('ЗАБРОНИРОВАТЬ')

@@ -8,3 +8,8 @@ mixin radioButton(title)
         input#radioButtonForLabel-2.radio-element(type="radio" value="2" name="radio")
         label(for="radioButtonForLabel-2")= title
 
+mixin radioButtonBlock
+    div.radio-buttons-row
+        +radioButtonActive('Мужчина')
+        +radioButton('Женщина')
+

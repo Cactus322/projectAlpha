@@ -1,0 +1,14 @@
+mixin signIn
+    include ../../components/text-field/__default/text-field__default
+    include ../../components/buttons/buttons
+    div.sign-in
+        div
+            h1 Войти
+        div.sign-in-text-field
+            +textFieldDefault
+            +textFieldDefault('Пароль')
+        div.sign-in-button
+            +buttonBiggest('ВОЙТИ')
+        div.sign-in-create
+            p Нет аккаунта на Toxin?
+            +buttonBorderGradientCreate('СОЗДАТЬ')
