@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Elements</title>
+  <link href="./style/cards.css" rel="stylesheet"></head>
+  <body class="form-elements">
+    <div><img class="form_logo-gray" src="./images/all/LogoGray.svg" alt="Логотип"></div>
+    <div></div>
+    <div class="form_grid">
+      <!--text fields-->
+      <section class="margin_text-field">
+        <div>
+          <div class="comment-grid">
+            <h3>TEXT FIELD</h3>
+            <p class="style_text-field">DEFAULT</p>
+          </div>
+                    <input class="text-field__default" type="Email" placeholder="Email">
+        </div>
+        <div class="row-2">
+          <div class="comment-grid">
+            <h3>TEXT FIELD</h3>
+            <p class="row-2_style_text-field">HOVER / FOCUS</p>
+          </div>
+                    <input class="text-field__hover" type="Email" placeholder="This is pretty awesome">
+        </div>
+        <div class="row-3">
+          <div class="comment-grid">
+            <h3>DROPDOWN</h3>
+            <p class="row-3_style_dropdown">DEFAULT</p>
+          </div>
+                    <div class="dropdown absolute" wordformsSecond="младенец младенца младенцев" wordforms="гость гостя гостей" default="Сколько гостей?">
+                      <div class="dropdown__name dropdown__name-disabled">Сколько гостей?</div><i class="material-icons dropdown-icon-style">expand_more</i>
+                      <div class="dropdown-list">
+                        <div class="dropdown-list__item" name="adult">Взрослые</div>
+                        <div class="dropdown-list__item" name="child">Дети</div>
+                        <div class="dropdown-list__item-second" name="babes">Младенцы</div>
+                      </div>
+                    </div>
+        </div>
+        <div class="row-4">
+                    <div>
+                      <div class="comment-grid">
+                        <h3>MASKED TEXT FIELD</h3>
+                        <p class="style_text-field">DEFAULT</p>
+                      </div>
+                      <input class="text-field__default" type="" placeholder="ДД.ММ.ГГГГ">
+                    </div>
+        </div>
+        <div class="row-5">
+                    <div class="datepicker-grid">
+                      <div>
+                        <h3>DATE DROPDOWN</h3>
+                        <input class="text-field__hover_mini placeholder-uppercase" id="start_datepicker" type="text" placeholder="ДД.ММ.ГГГГ" data-range="true" data-multiple-dates-separator=" - "><i class="material-icons datepicker__filter__button-icon-start" id="start_datepicker_button">expand_more</i>
+                      </div>
+                      <div>
+                        <h3>DATE DROPDOWN</h3>
+                        <input class="text-field__hover_mini placeholder-uppercase" id="end_datepicker" type="text" placeholder="ДД.ММ.ГГГГ"><i class="material-icons datepicker__filter__button-icon-end" id="end_datepicker_button">expand_more</i>
+                      </div>
+                    </div>
+        </div>
+        <div class="row-6">
+          <h3>FILTER DATE DROPDOWN</h3>
+                    <input class="text-field__hover_middle placeholder-uppercase" id="filter_datepicker" type="text" placeholder="ДД.ММ.ГГГГ" data-range="true" data-multiple-dates-separator=" - ">
+                    <button class="filter__datepicker__button-middle" id="filter_datepicker_button"><i class="material-icons datepicker__filter__button-icon">expand_more</i></button>
+        </div>
+        <div class="row-7">
+          <h3>SUBSCRIPTION TEXT FIELD</h3>
+                    <input class="text-field__default-middle" type="Email" placeholder="Email">
+                    <button class="text-field__button"><i class="material-icons text-field__button-color">arrow_forward</i></button>
+        </div>
+        <div class="row-8">
+          <div class="comment-grid">
+            <h3>DROPDOWN</h3>
+            <p class="row-3_style_dropdown middle">DEFAULT</p>
+          </div>
+                    <div class="dropdown absolute dropdown-middle" wordformsSecond="кровать кровати кроватей" wordforms="спальня спальни спален" wordformsThird="ванная ванные ванных" default="Удобства номера">
+                      <div class="dropdown__name dropdown__name-disabled">Сколько гостей?</div><i class="material-icons dropdown-icon-style middle">expand_more</i>
+                      <div class="dropdown-list room">
+                        <div class="dropdown-list__item" name="adult">Спальни</div>
+                        <div class="dropdown-list__item-second" name="child">Кровати</div>
+                        <div class="dropdown-list__item-third" name="babes">Ванные</div>
+                      </div>
+                    </div>
+        </div>
+        <div class="row-9">
+          <div class="comment-grid">
+            <h3>DROPDOWN</h3>
+            <p class="row-3_style_dropdown expanded">EXPANDED</p>
+          </div>
+                    <div class="dropdown absolute dropdown-middle active" wordformsThird="ванная ванные ванных" wordformsSecond="кровать кровати кроватей" wordforms="спальня спальни спален" default="Удобства номера">
+                      <div class="dropdown__name dropdown__name-disabled">Сколько гостей?</div><i class="material-icons dropdown-icon-style middle">expand_more</i>
+                      <div class="dropdown-list room">
+                        <div class="dropdown-list__item" name="adult">Спальни</div>
+                        <div class="dropdown-list__item-second" name="child">Кровати</div>
+                        <div class="dropdown-list__item-third" name="babes">Ванные комнаты</div>
+                      </div>
+                    </div>
+        </div>
+        <div class="row-10">
+          <!--RICH CHECKBOX BUTTONS-->
+          <!--TOGGLE CHECKBOX-->
+          <!--CHECKBOX BUTTONS-->
+          <!--EXPANDABLE CHECKBOX LIST-->
+                    <div class="checkbox-list"><span class="checkbox-list-span">EXPANDABLE CHECKBOX LIST</span>
+                      <ul class="checkbox-list-items">
+                        <li class="checkbox-list-flex">
+                          <input class="checkbox-element" id="checkboxElementForLabel-1" type="checkbox">
+                          <label for="checkboxElementForLabel-1">Завтрак</label>
+                        </li>
+                        <li class="checkbox-list-flex">
+                          <input class="checkbox-element" id="checkboxElementForLabel-2" type="checkbox">
+                          <label for="checkboxElementForLabel-2">Письменный стол</label>
+                        </li>
+                        <li class="checkbox-list-flex">
+                          <input class="checkbox-element" id="checkboxElementForLabel-3" type="checkbox">
+                          <label for="checkboxElementForLabel-3">Стул для кормления</label>
+                        </li>
+                        <li class="checkbox-list-flex">
+                          <input class="checkbox-element" id="checkboxElementForLabel-4" type="checkbox">
+                          <label for="checkboxElementForLabel-4">Кроватка</label>
+                        </li>
+                        <li class="checkbox-list-flex">
+                          <input class="checkbox-element" id="checkboxElementForLabel-5" type="checkbox">
+                          <label for="checkboxElementForLabel-5">Телевизор</label>
+                        </li>
+                        <li class="checkbox-list-flex">
+                          <input class="checkbox-element" id="checkboxElementForLabel-6" type="checkbox">
+                          <label for="checkboxElementForLabel-6">Шампунь</label>
+                        </li>
+                      </ul>
+                    </div>
+        </div>
+        <div class="row-11">
+                    <div class="checkbox-list"><span class="checkbox-list-span active">EXPANDABLE CHECKBOX LIST</span>
+                      <ul class="checkbox-list-items active">
+                        <li class="checkbox-list-flex">
+                          <input class="checkbox-element" id="checkboxElementForLabel-1-2" type="checkbox">
+                          <label for="checkboxElementForLabel-1-2">Завтрак</label>
+                        </li>
+                        <li class="checkbox-list-flex">
+                          <input class="checkbox-element" id="checkboxElementForLabel-2-2" type="checkbox" checked>
+                          <label for="checkboxElementForLabel-2-2">Письменный стол</label>
+                        </li>
+                        <li class="checkbox-list-flex">
+                          <input class="checkbox-element" id="checkboxElementForLabel-3-2" type="checkbox" checked>
+                          <label for="checkboxElementForLabel-3-2">Стул для кормления</label>
+                        </li>
+                        <li class="checkbox-list-flex">
+                          <input class="checkbox-element" id="checkboxElementForLabel-4-2" type="checkbox" checked>
+                          <label for="checkboxElementForLabel-4-2">Кроватка</label>
+                        </li>
+                        <li class="checkbox-list-flex">
+                          <input class="checkbox-element" id="checkboxElementForLabel-5-2" type="checkbox">
+                          <label for="checkboxElementForLabel-5-2">Телевизор</label>
+                        </li>
+                        <li class="checkbox-list-flex">
+                          <input class="checkbox-element" id="checkboxElementForLabel-6-2" type="checkbox">
+                          <label for="checkboxElementForLabel-6-2">Шампунь</label>
+                        </li>
+                      </ul>
+                    </div>
+        </div>
+        <div class="row-12">
+          <div class="flex-group">
+            <div><i class="material-icons emotion-icon-style">insert_emoticon</i></div>
+            <div>
+              <h3 class="comfort-head-style">Комфорт</h3>
+              <p class="comfort-text-style">Шумопоглощающие стены</p>
+            </div>
+          </div>
+          <div class="flex-group-second">
+            <div><i class="material-icons emotion-icon-style">location_city</i></div>
+            <div>
+              <h3 class="comfort-head-style">Удобство</h3>
+              <p class="comfort-text-style">Окно в каждой из спален</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="margin_text-field-2">
+        <div>
+          <h3>CHECKBOX BUTTONS</h3>
+          <div class="checkbox-column">
+                      <div>
+                        <input class="checkbox-element checkbox-element-normal" id="checkboxElementForLabel-1-3" type="checkbox">
+                        <label for="checkboxElementForLabel-1-3">Можно курить</label>
+                      </div>
+                      <div>
+                        <input class="checkbox-element checkbox-element-normal" id="checkboxElementForLabel-2-3" type="checkbox" checked>
+                        <label for="checkboxElementForLabel-2-3">Можно с питомцами</label>
+                      </div>
+                      <div>
+                        <input class="checkbox-element checkbox-element-normal" id="checkboxElementForLabel-3-3" type="checkbox" checked>
+                        <label for="checkboxElementForLabel-3-3">Можно пригласить гостей
+                          <p>(до 10 человек)</p>
+                        </label>
+                      </div>
+          </div>
+        </div>
+        <div class="row-2-2">
+          <h3>RADIO BUTTONS</h3>
+          <div class="radio-buttons-row">
+                        <div>
+                          <input class="radio-element" id="radioButtonForLabel-1" type="radio" value="1" name="radio" readonly="readonly" checked>
+                          <label for="radioButtonForLabel-1">Мужчина</label>
+                        </div>
+                        <div>
+                          <input class="radio-element" id="radioButtonForLabel-2" type="radio" value="2" name="radio">
+                          <label for="radioButtonForLabel-2">Женщина</label>
+                        </div>
+          </div>
+        </div>
+        <div class="row-3-2">
+          <h3>TOGGLE</h3>
+          <div class="checkbox-toggle-row">
+                      <div>
+                        <input class="checkbox-toggle-element checkbox-toggle-element-normal" id="checkboxToggleElementForLabel-1" type="checkbox" checked>
+                        <label for="checkboxToggleElementForLabel-1">Получать спецпредложения</label>
+                      </div>
+                      <div>
+                        <input class="checkbox-toggle-element checkbox-toggle-element-normal" id="checkboxToggleElementForLabel-2" type="checkbox">
+                        <label for="checkboxToggleElementForLabel-2">Получать спецпредложения</label>
+                      </div>
+          </div>
+        </div>
+        <div class="row-4-2">
+          <h3>LIKE BUTTON</h3>
+          <div class="like__button-column">
+                        <button class="like__button"><i class="material-icons">favorite_border</i><span>2</span></button>
+                        <button class="like__button-second liked"><i class="material-icons">favorite</i><span>12</span></button>
+          </div>
+        </div>
+        <div class="row-5-2">
+          <h3>RATE BUTTON</h3>
+          <div class="rating-area-grid">
+                        <div class="rating-area"><i class="material-icons" value="1">star</i><i class="material-icons" value="2">star</i><i class="material-icons" value="3">star</i><i class="material-icons active" value="4">star</i><i class="material-icons" value="5">star_border</i></div>
+                        <div class="rating-area"><i class="material-icons" value="1">star</i><i class="material-icons" value="2">star</i><i class="material-icons" value="3">star</i><i class="material-icons" value="4">star</i><i class="material-icons active" value="5">star</i></div>
+          </div>
+        </div>
+        <div class="row-6-2">
+          <div class="comment-grid">
+            <h3>DROPDOWN</h3>
+          </div>
+                    <div class="dropdown absolute active" wordformsSecond="младенец младенца младенцев" wordforms="гость гостя гостей" default="Сколько гостей?">
+                      <div class="dropdown__name dropdown__name-disabled">Сколько гостей?</div><i class="material-icons dropdown-icon-style">expand_more</i>
+                      <div class="dropdown-list">
+                        <div class="dropdown-list__item" name="adult">Взрослые</div>
+                        <div class="dropdown-list__item" name="child">Дети</div>
+                        <div class="dropdown-list__item-second" name="babes">Младенцы</div>
+                      </div>
+                    </div>
+        </div>
+        <div class="row-7-2">
+          <h3>RICH CHECKBOX BUTTONS</h3>
+                    <div class="rich-checkbox-row">
+                      <div class="checkbox-first-margin">
+                        <input class="checkbox-element checkbox-element-bold" id="checkboxElementForLabel-1-4" type="checkbox">
+                        <label for="checkboxElementForLabel-1-4">Широкий коридор</label>
+                        <p class="rich-checkbox-bottom-text">Ширина коридоров в номере<br>не менее 91 см.</p>
+                      </div>
+                      <div>
+                        <input class="checkbox-element checkbox-element-bold" id="checkboxElementForLabel-2-4" type="checkbox">
+                        <label for="checkboxElementForLabel-2-4">Помощник для инвалидов</label>
+                        <p class="rich-checkbox-bottom-text">На 1 этаже вас встретит специалист  и проводит до номера.</p>
+                      </div>
+                    </div>
+        </div>
+        <div class="row-8-2">
+                    <div class="comment-wrapper"><img src="./images/all/comment.png">
+                      <div>
+                        <h3>Мурад Сарафанов</h3>
+                        <p>5 дней назад</p>
+                      </div>
+                    </div>
+                    <div class="comment-wrapper">
+                      <button class="like__button-second liked page-position"><i class="material-icons">favorite</i><span>12</span></button>
+                      <p class="comment-bottom-text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.<br>И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто<br>не жаловался из соседей.</p>
+                    </div>
+        </div>
+      </section>
+      <section class="margin_text-field-3">
+                <div>
+                  <h3>
+                    <label>RANGE SLIDER</label>
+                    <input id="amount" type="text" readonly>
+                  </h3>
+                  <div id="range-slider"></div>
+                </div>
+        <div class="row-2-3">
+          <h3>BUTTONS</h3>
+                    <div class="buttons-row">
+                      <button class="buttons__full-gradient">CLICK ME</button>
+                      <button class="buttons__full-gradient disable">CLICK ME</button>
+                    </div>
+                    <div class="buttons-row">
+                      <button class="buttons__border-gradient">CLICK ME</button>
+                      <button class="buttons__border-gradient disable">CLICK ME</button>
+                    </div>
+                    <div class="buttons-row-2"><a class="buttons__only-text">CLICK ME</a><a class="buttons__only-text disable">CLICK ME</a></div>
+                    <button class="buttons__payment">ПЕРЕЙТИ К ОПЛАТЕ</button>
+        </div>
+        <div class="row-3-3">
+          <h3>PAGINATION</h3>
+                    <div id="paginationFrontend"></div>
+                    <p class="pagination-bottom-text">1 – 12 из 100+ вариантов аренды</p>
+        </div>
+        <div class="row-4-3">
+          <h3>DROPDOWN</h3>
+          <!-- Исправить dropdown.js (убрать "очистить", когда счетчики на нулях, и, для этой версии, добавить значения счетчикам)-->
+                    <div class="dropdown absolute active" wordformsSecond="младенец младенца младенцев" wordforms="гость гостя гостей" default="Сколько гостей?">
+                      <div class="dropdown__name dropdown__name-disabled">Сколько гостей?</div><i class="material-icons dropdown-icon-style">expand_more</i>
+                      <div class="dropdown-list">
+                        <div class="dropdown-list__item" name="adult">Взрослые</div>
+                        <div class="dropdown-list__item" name="child">Дети</div>
+                        <div class="dropdown-list__item-second" name="babes">Младенцы</div>
+                      </div>
+                    </div>
+        </div>
+        <div class="row-5-3">
+          <h3>BULLET LIST</h3>
+<ul class="bullet-list">
+  <li>
+    <p>  Нельзя с питомцами</p>
+  </li>
+  <li>
+    <p>Без вечеринок и мероприятий</p>
+  </li>
+  <li>
+    <p>Время прибытия — после 13:00, а выезд до 12:00</p>
+  </li>
+</ul>
+        </div>
+      </section>
+    </div>
+  <script type="text/javascript" src="app.bundle.js"></script></body>
+</html>
