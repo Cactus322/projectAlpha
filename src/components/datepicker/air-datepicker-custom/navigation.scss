@@ -5,11 +5,12 @@
    ------------------------------------------------- */
 
 .datepicker--nav {
+  font-family: OpenSans-Bold;
+  font-size: 19px;
   display: flex;
   justify-content: space-between;
   min-height: $datepickerNavigationHeight;
-  padding: $datepickerPadding;
-  font-family: Montserrat;
+  padding-top: 15px;
   font-weight: bold;
   color: #1f2041;
 
@@ -30,6 +31,8 @@
   width: $datepickerDayCellSize;
   border-radius: $datepickerBorderRadius;
   user-select: none;
+  padding-left: 14px;
+  padding-right: 13px;
 
   &:hover {
     background: map_get($datepickerBG, hover);
@@ -78,9 +81,8 @@
 }
 
 .datepicker--button {
-  font-family: Montserrat;
-  font-weight: bold;
-  font-size: 15px;
+  font-family: Montserrat-Bold;
+  font-size: 12px;
   width: 84px;
   color: $darkShade50;
   cursor: pointer;
@@ -88,7 +90,8 @@
   justify-content: flex-start;
   align-items: center;
   flex: 1;
-  padding: 20px 0 20px 20px;
+  padding: 14px 0 20px 17px;
+  text-transform: uppercase;
 
   &:hover {
     color: $darkShade75;
@@ -96,9 +99,9 @@
 }
 
 .datepicker--button-apply {
-  font-family: Montserrat;
-  font-weight: bold;
-  font-size: 15px;
+  font-family: Montserrat-Bold;
+  text-transform: uppercase;
+  font-size: 12px;
   width: 84px;
   color: $purple;
   cursor: pointer;
@@ -109,7 +112,7 @@
   outline: none;
   border: none;
   flex: 1;
-  padding: 20px 20px 20px 0;
+  padding: 14px 17px 20px 0;
 
   &:hover {
     color: darken($purple, 15%);

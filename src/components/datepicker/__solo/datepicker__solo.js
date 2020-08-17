@@ -1,7 +1,5 @@
 let mySoloDatepicker = $('#solo_datepicker').datepicker({
-    minDate: new Date,
     clearButton: true,
-    dateFormat: "d M",
 
     onShow: function(dp, animationCompleted) {
         $('#solo_datepicker_button').click(function () {
@@ -9,7 +7,7 @@ let mySoloDatepicker = $('#solo_datepicker').datepicker({
         });
 
         if (!animationCompleted) {
-            $('.datepicker-__buttons-apply').click(function() {
+            $('.datepicker--buttons-apply').click(function() {
                 dp.hide();
             })
         }
@@ -17,7 +15,6 @@ let mySoloDatepicker = $('#solo_datepicker').datepicker({
 }).data('datepicker');
 
 $('div.datepicker--buttons').append('<button class="datepicker--button-apply">Применить</button>');
-
 
 mySoloDatepicker.show();
 mySoloDatepicker.hide();

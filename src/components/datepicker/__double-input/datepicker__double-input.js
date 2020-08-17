@@ -12,7 +12,7 @@ let myDatepicker = $('#start_datepicker').datepicker({
         });
 
         if (!animationCompleted) {
-            $('.datepicker-__buttons-apply').click(function() {
+            $('.datepicker--buttons-apply').click(function() {
                 dp.hide();
             })
         }

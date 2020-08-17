@@ -160,7 +160,9 @@
 }
 
 .datepicker--day-name {
-  font-family: Montserrat;
+  font-family: Montserrat-Bold;
+  font-size: 12px;
+  text-transform: capitalize;
   font-weight: bold;
   color: $purple;
   display: flex;
@@ -168,8 +170,6 @@
   justify-content: center;
   flex: 1;
   text-align: center;
-  text-transform: uppercase;
-  font-size: 12px;
 }
 
 //  Day cell
