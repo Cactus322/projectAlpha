@@ -17,3 +17,34 @@ roomImage[11]="../../images/all/room-12.png";
 room.src=""+ roomImage[a] +"";
 
 console.log(document.querySelectorAll("room-image"));*/
+
+$('.room-gallery-icon').click(function () {
+    let $this = $(this);
+    $this.addClass('active').siblings().removeClass('active');
+});
+
+$('.room-gallery-icon').hover(function () {
+    let $this = $(this);
+    $this.toggleClass('hover')
+})
+
+$('.trigger-img-1').click(function () {
+    console.log('click')
+    $('.room-gallery ul').css({'marginLeft' : '0'});
+
+})
+
+$('.trigger-img-2').click(function () {
+    $('.room-gallery ul').css({'marginLeft' : '-270px'});
+
+})
+
+$('.trigger-img-3').click(function () {
+    $('.room-gallery ul').css({'marginLeft' : '-540px'});
+
+})
+
+$('.trigger-img-4').click(function () {
+    $('.room-gallery ul').css({'marginLeft' : '-810px'});
+
+})

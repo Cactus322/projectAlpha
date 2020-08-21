@@ -51,7 +51,7 @@ body {
 
 .cards-column-3 {
   display: grid;
-  grid-template-rows: auto;
+  grid-template-rows: 38% 30% 40%;
 }
 
 .cards-row-1-1 {
@@ -75,6 +75,11 @@ body {
 }
 
 .cards-row-2-3 {
-  margin-top: 25px;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+.cards-row-3-3 {
+  margin-top: -10px;
   margin-left: 30px;
 }

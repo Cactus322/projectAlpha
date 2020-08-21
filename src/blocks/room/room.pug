@@ -1,17 +1,59 @@
-mixin room
+mixin roomLuxury (titleOne)
+    include ../../components/buttons/__rate/buttons__rate
     div.room
         div.room-gallery
             ul
                 li
-                    img.room-image-1(src=require('../../images/all/room-1.png').default)
+                    img.room-image(src=require('../../images/all/room-1.png').default)
                 li
                     img.room-image(src=require('../../images/all/room-2.png').default)
                 li
                     img.room-image(src=require('../../images/all/room-3.png').default)
                 li
                     img.room-image(src=require('../../images/all/room-4.png').default)
-            div.room-gallery-icon
-                i.material-icons lens
-                i.material-icons panorama_fish_eye
-                i.material-icons panorama_fish_eye
-                i.material-icons panorama_fish_eye
+            div.room-gallery-icon-position
+                i.material-icons.room-gallery-icon.trigger-img-1.active
+                i.material-icons.room-gallery-icon.trigger-img-2
+                i.material-icons.room-gallery-icon.trigger-img-3
+                i.material-icons.room-gallery-icon.trigger-img-4
+        div.room-price
+            p.room-number
+                | №
+                big= titleOne
+            h3.room-quality ЛЮКС
+            p.room-value.bold 9 990₽
+            p.room-value в сутки
+        div.room-rate
+            +buttonRate5
+            p.room-rate-reviews.bold 145
+            p.room-rate-reviews Отзывов
+
+mixin room (roomNumber, price, reviewsNumber)
+    include ../../components/buttons/__rate/buttons__rate
+    div.room
+        div.room-gallery
+            ul
+                li
+                    img.room-image(src=require('../../images/all/room-2.png').default)
+                li
+                    img.room-image(src=require('../../images/all/room-1.png').default)
+                li
+                    img.room-image(src=require('../../images/all/room-3.png').default)
+                li
+                    img.room-image(src=require('../../images/all/room-4.png').default)
+            div.room-gallery-icon-position
+                i.material-icons.room-gallery-icon.trigger-img-1.active
+                i.material-icons.room-gallery-icon.trigger-img-2
+                i.material-icons.room-gallery-icon.trigger-img-3
+                i.material-icons.room-gallery-icon.trigger-img-4
+        div.room-price
+            p.room-number
+                | №
+                big= roomNumber
+            h3.room-quality ЛЮКС
+            p.room-value.bold= price
+            p.room-value в сутки
+        div.room-rate
+            +buttonRate4
+            p.room-rate-reviews.bold.margin= reviewsNumber
+            p.room-rate-reviews Отзывов

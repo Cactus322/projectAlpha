@@ -23,15 +23,95 @@
   display: inline-block;
 }
 
-.room-gallery-icon {
+.room-gallery-icon-position {
   position: absolute;
-  margin-left: 220px;
-  margin-top: -25px;
-
-  & i {
-    font-size: 10px;
-    color: #FFFFFF;
-  }
-
+  margin-left: 215px;
+  margin-top: -23px;
 }
 
+.room-gallery-icon {
+  width: 5px; /* поддерживаются любые единицы, в том числе проценты */
+  height: 5px;
+  border: 1px solid #FFFFFF;
+  background: transparent;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.room-gallery-icon::before {
+  content: "";
+  display: inline-block;
+}
+
+.room-gallery-icon.active {
+  width: 5px; /* поддерживаются любые единицы, в том числе проценты */
+  height: 5px;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+
+.room-gallery-icon.active::before {
+  content: "";
+  display: inline-block;
+}
+
+.room-gallery-icon.hover {
+  width: 6px; /* поддерживаются любые единицы, в том числе проценты */
+  height: 6px;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+
+.room-gallery-icon.hover::before {
+  content: "";
+  display: inline-block;
+}
+
+.room-price {
+  display: grid;
+  grid-template-columns: 29% 27% 20% 50%;
+}
+
+.room-number {
+  font-family: OpenSans-Bold;
+  font-size: 16px;
+  color: $darkShade100;
+  margin-left: 20px;
+  margin-top: 19px;
+}
+
+.room-quality {
+  color: $purple;
+  margin-top: 27px;
+}
+
+.room-value {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.room-value.bold {
+  font-family: Montserrat-Bold;
+  font-size: 14px;
+  color: $darkShade50;
+}
+
+.room-rate {
+  display: grid;
+  grid-template-columns: 56% 11% 20%;
+  margin-left: 20px;
+  margin-top: 3px;
+}
+
+.room-rate-reviews {
+  margin-top: 0px;
+}
+
+.room-rate-reviews.bold {
+  font-family: Montserrat-Bold;
+  color: $darkShade50;
+}
+
+.room-rate-reviews.margin {
+  margin-left: 6px;
+}
